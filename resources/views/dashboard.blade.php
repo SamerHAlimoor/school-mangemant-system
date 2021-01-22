@@ -19,7 +19,8 @@
  preloader -->
 
         <div id="pre-loader">
-            <img src="assets/images/pre-loader/loader-01.svg" alt="">
+
+            <img src="{{ URL::asset('assets/images/pre-loader/loader-01.svg') }}" alt="">
         </div>
 
         <!--=================================
@@ -260,7 +261,7 @@
                                         aria-labelledby="months-tab">
                                         <div class="row mb-30">
                                             <div class="col-md-2 col-sm-6">
-                                                <img class="img-fluid" src="images/blog/05.jpg" alt="">
+                                                <img class="img-fluid" src="{{ URL::asset('images/blog/05.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-6 col-sm-6">
                                                 <h6 class="mb-0 sm-mt-5">Supercharge your motivation</h6>
@@ -279,7 +280,7 @@
                                         </div>
                                         <div class="row mb-30">
                                             <div class="col-md-2 col-sm-6">
-                                                <img class="img-fluid" src="images/blog/02.jpg" alt="">
+                                                <img class="img-fluid" src="{{ URL::asset('images/blog/02.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-6 col-sm-6">
                                                 <h6 class="mb-0 sm-mt-5">Helen keller a teller seller</h6>
@@ -299,7 +300,7 @@
                                         </div>
                                         <div class="row mb-30">
                                             <div class="col-md-2 col-sm-6">
-                                                <img class="img-fluid" src="images/blog/03.jpg" alt="">
+                                                <img class="img-fluid" src="{{ URL::asset('images/blog/03.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-6 col-sm-6">
                                                 <h6 class="mb-0 sm-mt-5">The other virtues practice</h6>
@@ -319,7 +320,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-2 col-sm-6">
-                                                <img class="img-fluid" src="images/blog/04.jpg" alt="">
+                                                <img class="img-fluid" src="{{ URL::asset('images/blog/04.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-6 col-sm-6">
                                                 <h6 class="mb-0 sm-mt-5">You will begin to realise</h6>
@@ -341,7 +342,7 @@
                                     <div class="tab-pane fade" id="year" role="tabpanel" aria-labelledby="year-tab">
                                         <div class="row mb-30">
                                             <div class="col-md-2 col-sm-6">
-                                                <img class="img-fluid" src="images/blog/09.jpg" alt="">
+                                                <img class="img-fluid" src="{{ URL::asset('images/blog/09.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-6 col-sm-6">
                                                 <h6 class="mb-0 sm-mt-5">Walk out 10 years into</h6>
@@ -361,7 +362,7 @@
                                         </div>
                                         <div class="row mb-30">
                                             <div class="col-md-2 col-sm-6">
-                                                <img class="img-fluid" src="images/blog/06.jpg" alt="">
+                                                <img class="img-fluid" src="{{ URL::asset('images/blog/06.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-6 col-sm-6">
                                                 <h6 class="mb-0 sm-mt-5">Step out on to the path</h6>
@@ -381,7 +382,7 @@
                                         </div>
                                         <div class="row mb-30">
                                             <div class="col-md-2 col-sm-6">
-                                                <img class="img-fluid" src="images/blog/07.jpg" alt="">
+                                                <img class="img-fluid" src="{{ URL::asset('images/blog/07.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-6 col-sm-6">
                                                 <h6 class="mb-0 sm-mt-5">Briefly imagine that you</h6>
@@ -401,7 +402,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-2 col-sm-6">
-                                                <img class="img-fluid" src="images/blog/08.jpg" alt="">
+                                                <img class="img-fluid" src="{{ URL::asset('images/blog/08.jpg') }}" alt="">
                                             </div>
                                             <div class="col-md-6 col-sm-6">
                                                 <h6 class="mb-0 sm-mt-5">You continue doing what</h6>
