@@ -49,7 +49,7 @@
                             <h2 class="text-white mb-20">مدرسة الفلاح</h2>
                             <p class="mb-20 text-white">انشئت في 1999  في مدينة عمان </p>
                             <ul class="list-unstyled">
-                                <li class="list-inline-item"><a class="" style="color: yellow" href="#"> للتسجيل اضغط هنا</a> </li>
+                                <li class="list-inline-item"><a class="" style="color: yellow" href="{{ route('register') }}"> للتسجيل اضغط هنا</a> </li>
                                
                             </ul>
                             
