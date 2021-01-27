@@ -18,5 +18,6 @@ return [
     'Delete' => 'Delete',
     'Close' => 'Close',
     'yes' => 'Yes',
+    'exists' => 'This field already exists',
 
 ];

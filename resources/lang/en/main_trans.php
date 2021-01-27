@@ -7,6 +7,7 @@ return [
     'Programname' => 'School Management',
     'change_language' => 'language',
     'Grades' => 'Grades',
+'List_classes'=>'Class List',
     'Grades_list' => 'Grades List',
     'classes' => 'Classes',
     'sections' => 'Sections',
