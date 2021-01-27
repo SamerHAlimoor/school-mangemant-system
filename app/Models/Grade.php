@@ -9,10 +9,11 @@ class Grade extends Model
 {
 
     use HasTranslations;
+    protected $table = 'grades';
+
     public $translatable = ['name'];
 
     protected $fillable = ['name', 'notes'];
-    protected $table = 'grades';
     public $timestamps = true;
 
 }

@@ -28,23 +28,29 @@ class GradeController extends Controller
      */
     public function store(StoreGrades $request)
     {
-        try {
-            $validated = $request->validated();
-            $Grade = new Grade();
-            /*
-            $translations = [
-            'en' => $request->Name_en,
-            'ar' => $request->Name
-            ];
-            $Grade->setTranslations('Name', $translations);
-             */
-            $Grade->name = ['en' => $request->Name_en, 'ar' => $request->name];
-            $Grade->notes = $request->notes;
-            $Grade->save();
-            toastr()->success(trans('messages.success'));
-            return redirect()->route('Grades.index');
-        } catch (\Exception $e) {
-            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+
+        if (Grade::where('name->ar', $request->name)->orWhere('name->en', $request->name_en)->exists()) {
+
+            return redirect()->back()->withErrors(trans('Grades_trans.exists'));
+        } else {
+            try {
+                $validated = $request->validated();
+                $Grade = new Grade();
+                /*
+                $translations = [
+                'en' => $request->Name_en,
+                'ar' => $request->Name
+                ];
+                $Grade->setTranslations('Name', $translations);
+                 */
+                $Grade->name = ['en' => $request->name_en, 'ar' => $request->name];
+                $Grade->notes = $request->notes;
+                $Grade->save();
+                toastr()->success(trans('messages.success'));
+                redirect()->route('Grades.index');
+            } catch (\Exception $e) {
+                return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+            }
         }
 
     }
@@ -61,9 +67,15 @@ class GradeController extends Controller
             $validated = $request->validated();
             $grades = Grade::findOrFail($request->id);
             $grades->update([
-                $grades->name = ['ar' => $request->name, 'en' => $request->name_en],
+
                 $grades->notes = $request->notes,
             ]);
+            $translations = [
+                'en' => $request->name_en,
+                'ar' => $request->name,
+            ];
+            $grades->setTranslations('name', $translations);
+            $grades->save();
             toastr()->success(trans('messages.Update'));
             return redirect()->route('Grades.index');
         } catch (\Exception $e) {

@@ -86,27 +86,28 @@
                         </div>
                     </div>
                 </li>
-                <div class="nav-item dropdown">
-
-                    <button class="btn  btn-lg dropdown-toggle " type="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{ LaravelLocalization::getCurrentLocaleName() }}
+                <div class="btn-group mb-1">
+                    <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      @if (App::getLocale() == 'ar')
+                      {{ LaravelLocalization::getCurrentLocaleName() }}
+                     <img src="{{ URL::asset('assets/images/flags/JO.png') }}" alt="">
+                      @else
+                      {{ LaravelLocalization::getCurrentLocaleName() }}
+                      <img src="{{ URL::asset('assets/images/flags/US.png') }}" alt="">
+                      @endif
                       </button>
-
-
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div class="dropdown-menu">
                         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                        <li>
-                            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                {{ $properties['native'] }}
-                            </a>
-                        </li>
-                    @endforeach
+                                <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    {{ $properties['native'] }}
+                                </a>
+                        @endforeach
                     </div>
-                  </div>
+                </div>
                 <li class="nav-item dropdown mr-30">
                     <a class="nav-link nav-pill user-avatar" data-toggle="dropdown" href="#" role="button"
                         aria-haspopup="true" aria-expanded="false">
-                        <img src="{{ URL::asset('assets/images/profile-avatar.jpg') }}" alt="avatar">
+                        <img src="{{ URL::asset('assets/images/user_icon.png') }}" alt="avatar">
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right">
