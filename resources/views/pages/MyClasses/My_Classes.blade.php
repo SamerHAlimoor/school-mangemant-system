@@ -52,8 +52,8 @@
                             <tr>
                                 <?php $i++;?>
                                 <td>{{ $i }}</td>
-                                <td>{{ $My_Class->Name }}</td>
-                                <td>{{ $My_Class->Grades->Name }}</td>
+                                <td>{{ $My_Class->name_class }}</td>
+                                <td>{{ $My_Class->grades->name }}</td>
                                 <td>
                                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
                                         data-target="#edit{{ $My_Class->id }}"
@@ -210,7 +210,7 @@
                                                     :</label>
 
                                                 <div class="box">
-                                                    <select class="fancyselect" name="Grade_id">
+                                                    <select class="fancyselect" name="grade_id">
                                                         @foreach ($Grades as $Grade)
                                                         <option value="{{ $Grade->id }}">{{ $Grade->name }}</option>
                                                         @endforeach

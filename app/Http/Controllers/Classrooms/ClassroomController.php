@@ -41,7 +41,29 @@ class ClassroomController extends Controller
      */
     public function store(Request $request)
     {
+        $List_Classes = $request->List_Classes;
 
+        //  return $List_Classes;
+
+        try {
+
+            foreach ($List_Classes as $List_Class) {
+
+                $My_Classes = new Classroom();
+
+                $My_Classes->name_class = ['en' => $List_Class['name_class_en'], 'ar' => $List_Class['name']];
+
+                $My_Classes->grade_id = $List_Class['grade_id'];
+
+                $My_Classes->save();
+
+            }
+
+            toastr()->success(trans('messages.success'));
+            return redirect()->route('Classrooms.index');
+        } catch (\Exception $e) {
+            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+        }
     }
 
     /**
