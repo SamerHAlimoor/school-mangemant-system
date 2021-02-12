@@ -29,29 +29,29 @@ class GradeController extends Controller
     public function store(StoreGrades $request)
     {
 
-        if (Grade::where('name->ar', $request->name)->orWhere('name->en', $request->name_en)->exists()) {
+        /*  if (Grade::where('name->ar', $request->name)->orWhere('name->en', $request->name_en)->exists()) {
 
-            return redirect()->back()->withErrors(trans('Grades_trans.exists'));
-        } else {
-            try {
-                $validated = $request->validated();
-                $Grade = new Grade();
-                /*
-                $translations = [
-                'en' => $request->Name_en,
-                'ar' => $request->Name
-                ];
-                $Grade->setTranslations('Name', $translations);
-                 */
-                $Grade->name = ['en' => $request->name_en, 'ar' => $request->name];
-                $Grade->notes = $request->notes;
-                $Grade->save();
-                toastr()->success(trans('messages.success'));
-                redirect()->route('Grades.index');
-            } catch (\Exception $e) {
-                return redirect()->back()->withErrors(['error' => $e->getMessage()]);
-            }
+        return redirect()->back()->withErrors(trans('Grades_trans.exists'));
+        } else { */
+        try {
+            $validated = $request->validated();
+            $Grade = new Grade();
+            /*
+            $translations = [
+            'en' => $request->Name_en,
+            'ar' => $request->Name
+            ];
+            $Grade->setTranslations('Name', $translations);
+             */
+            $Grade->name = ['en' => $request->name_en, 'ar' => $request->name];
+            $Grade->notes = $request->notes;
+            $Grade->save();
+            toastr()->success(trans('messages.success'));
+            redirect()->route('Grades.index');
+        } catch (\Exception $e) {
+            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
         }
+        /* }*/
 
     }
 
