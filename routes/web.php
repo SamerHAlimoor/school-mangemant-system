@@ -32,6 +32,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
     Route::group(['namespace' => 'Classrooms'], function () {
         Route::resource('Classrooms', 'ClassroomController');
+
     });
 
 });
