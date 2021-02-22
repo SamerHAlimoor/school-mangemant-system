@@ -11,6 +11,9 @@ return [
     'submit' => 'submit',
     'Name_class' => 'Name Class',
     'Name_class_en' => 'Name class english',
+    'delete_checkbox' => 'Delete Selected',
+    'Search_By_Grade' => 'Search By Grade Name',
+
     'Name_Grade' => 'Name Grade',
     'add_row' => 'add row',
     'delete_row' => 'Delete row',

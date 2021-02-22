@@ -35,6 +35,7 @@
                     <button type="button" class="button x-small" data-toggle="modal" data-target="#exampleModal">
                         {{ trans('Grades_trans.add_Grade') }}
                     </button>
+                    
                     <br><br>
 
                     <div class="table-responsive">
