@@ -38,4 +38,14 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
     });
 
+    //==============================Sections============================
+
+    Route::group(['namespace' => 'Sections'], function () {
+
+        Route::resource('Sections', 'SectionController');
+
+        Route::get('/classes/{id}', 'SectionController@getclasses');
+
+    });
+
 });
