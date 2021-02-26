@@ -16,4 +16,9 @@ class Grade extends Model
     protected $fillable = ['name', 'notes'];
     public $timestamps = true;
 
+    public function Sections()
+    {
+        return $this->hasMany('App\Models\Section', 'grade_id');
+    }
+
 }
