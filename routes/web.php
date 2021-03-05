@@ -48,4 +48,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
     });
 
+    //==============================parents============================
+
+    Route::view('addParent', 'livewire.show_Form');
+
 });
