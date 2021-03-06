@@ -44,15 +44,20 @@
             <div class="container">
                 <div class="row justify-content-center no-gutters vertical-align">
                     <div class="col-lg-4 col-md-6 login-fancy-bg bg"
-                        style="background-image: url({{ URL::asset('assets/images/login-inner-bg.jpg') }});">
+                        style="background-image: url({{ URL::asset('assets/images/purple.png') }});">
                         <div class="login-fancy">
-                            <h2 class="text-white mb-20">مدرسة الفلاح</h2>
-                            <p class="mb-20 text-white">انشئت في 1999  في مدينة عمان </p>
+                            <h3 class="text-white mb-20">مجموعة السلام التدريبية </h3>
+                            <p class="mb-20 text-white text-sm">في عام 2000 ، قامت مجموعة من الأكاديميين الطموحين بتأسيس مجموعة مراكز السلام للتدريب لتلبية احتياجات السوق المحلي. ATG هو
+                                مؤسسة التدريب الفلسطينية المستقلة. بدأت ATG عملها بتقديم
+                                دورات تدريبية لممارسة اللغة الإنجليزية وإتقانها. سنوات قليلة
+                                فيما بعد ، وسعت عملها لتلتحق
+                                التخصصات الأخرى التي تخدم السوق المحلي مثل المحاسبة ،
+                                التفكير الإبداعي والإدارة والسكرتير . </p>
                             <ul class="list-unstyled">
                                 <li class="list-inline-item"><a class="" style="color: yellow" href="{{ route('register') }}"> للتسجيل اضغط هنا</a> </li>
-                               
+
                             </ul>
-                            
+
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 bg-white">
