@@ -19,8 +19,9 @@ return [
     'Religion_Father_id' => 'Religion',
     'Address_Father' => 'Address Father',
     'Add_Parent' => 'Add A New Parent',
-    
 
     'Next' => 'Next',
     'Choose' => 'Choose',
+    'Attachments' => 'Attachments',
+    'Processes' => 'Processes',
 ];
