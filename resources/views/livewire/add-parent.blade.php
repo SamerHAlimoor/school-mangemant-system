@@ -1,3 +1,5 @@
+
+
 <div>
     @if (!empty($successMessage))
         <div class="alert alert-success" id="success-alert">
@@ -12,6 +14,11 @@
     </div>
 @endif
 
+
+
+@if($show_table)
+@include('livewire.parent_table')
+@else
     <div class="stepwizard">
         <div class="stepwizard-row setup-panel">
             <div class="stepwizard-step">
@@ -66,4 +73,5 @@
                     </div>
                 </div>
             </div>
+            @endif
     </div>

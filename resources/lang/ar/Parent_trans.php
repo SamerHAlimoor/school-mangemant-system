@@ -36,5 +36,9 @@ return [
     'Choose' => 'اختيار من القائمة',
     'Attachments' => 'المرفقات',
     'Processes' => 'العمليات',
+    'add_parent' => 'اضافة ولي امر',
+    'list_Parent' => 'قائمة أولياء الامور',
+
+    
 
 ];

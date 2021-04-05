@@ -41,13 +41,13 @@ class CreateAddParentsTable extends Migration
             $table->string('address_mother');
             $table->timestamps();
 // Realations
-            $table->foreign('nationality_father_id')->references('id')->on('nationalities');
-            $table->foreign('blood_type_father_id')->references('id')->on('type_bloods');
-            $table->foreign('religion_father_id')->references('id')->on('religions');
+            $table->foreign('nationality_father_id')->references('id')->on('nationalities')->onDelete('cascade');;
+            $table->foreign('blood_type_father_id')->references('id')->on('type_bloods')->onDelete('cascade');;
+            $table->foreign('religion_father_id')->references('id')->on('religions')->onDelete('cascade');;
             // ---
-            $table->foreign('nationality_mother_id')->references('id')->on('nationalities');
-            $table->foreign('blood_type_mother_id')->references('id')->on('type_bloods');
-            $table->foreign('religion_mother_id')->references('id')->on('religions');
+            $table->foreign('nationality_mother_id')->references('id')->on('nationalities')->onDelete('cascade');;
+            $table->foreign('blood_type_mother_id')->references('id')->on('type_bloods')->onDelete('cascade');;
+            $table->foreign('religion_mother_id')->references('id')->on('religions')->onDelete('cascade');;
         });
     }
 

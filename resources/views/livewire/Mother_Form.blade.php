@@ -115,9 +115,17 @@
                 <button class="btn btn-danger btn-sm nextBtn btn-lg pull-right pl-5 pr-5 pt-2 pb-2  ml-3 mr-3" type="button" wire:click="back(1)">
                     {{trans('Parent_trans.Back')}}
                 </button>
-
-                <button class="btn btn-success btn-sm nextBtn btn-lg pull-right pl-5 pr-5 pt-2 pb-2 ml-3 mr-3" type="button"
+                @if($updateMode)
+                <button class="btn btn-success btn-sm nextBtn btn-lg pull-right  pl-5 pr-5 pt-2 pb-2 ml-3 mr-3" wire:click="secondStepSubmit_edit"
+                        type="button">{{trans('Parent_trans.Next')}}
+                </button>
+            @else
+                <button class="btn btn-success btn-sm nextBtn btn-lg pull-right  pl-5 pr-5 pt-2 pb-2 ml-3 mr-3" type="button"
                         wire:click="secondStepSubmit">{{trans('Parent_trans.Next')}}</button>
+            @endif
+
+
+            
 
             </div>
         </div>

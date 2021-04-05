@@ -20,7 +20,7 @@
     <div class="col-md-12 mb-30">
         <div class="card card-statistics h-100">
             <div class="card-body">
-                <p> {{trans('Parent_trans.Add_Parent')}}</p>
+               
                 <livewire:add-parent/>
             </div>
         </div>
