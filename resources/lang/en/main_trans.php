@@ -17,7 +17,7 @@ return [
     'information_student' => 'Information Students',
     'Students_upgrade' => 'Students Upgrade',
     'Graduate_students' => 'Graduate Students',
-    'Teachers' => 'Teachers',
+    'Teachers' => 'List Teachers',
     'Parents' => 'Parents',
     'Add_Parent' => 'Add Parent',
     'List_Parents' => 'List Parents',

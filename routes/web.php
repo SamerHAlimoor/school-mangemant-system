@@ -48,7 +48,17 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
     });
 
-    //==============================parents============================
+    //==============================teacher ============================
+
+    
+    Route::group(['namespace' => 'Teacher'], function () {
+
+        Route::resource('Teacher', 'TeacherController');
+
+
+    });
+
+    //==============================teacher============================
 
     Route::view('addParent', 'livewire.show_Form');
 

@@ -24,4 +24,7 @@ return [
     'Choose' => 'Choose',
     'Attachments' => 'Attachments',
     'Processes' => 'Processes',
+    'add_parent' => 'add parent',
+    'list_Parent' => 'List Parents',
+
 ];

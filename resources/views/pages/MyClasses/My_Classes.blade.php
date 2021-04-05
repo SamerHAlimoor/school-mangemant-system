@@ -12,6 +12,8 @@
 @stop
 <!-- breadcrumb -->
 @endsection
+
+
 @section('content')
 <!-- row -->
 <div class="row">
@@ -337,9 +339,9 @@
     </div>
 </div>
 
-</div>
 
-</div>
+
+
 
 <!-- row closed -->
 @endsection
