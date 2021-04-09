@@ -9,7 +9,7 @@ class CreateSectionsTable extends Migration
     public function up()
     {
         Schema::create('sections', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('name_section');
             $table->integer('status');
             $table->bigInteger('grade_id')->unsigned();

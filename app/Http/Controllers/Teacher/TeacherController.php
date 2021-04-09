@@ -3,6 +3,7 @@ namespace App\Http\Controllers\Teacher;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreSections;
+use App\Http\Requests\StoreTeachers;
 use App\Models\Classroom;
 use App\Models\Grade;
 use App\Models\Section;
@@ -21,6 +22,9 @@ class TeacherController extends Controller
     {
         $this->Teacher = $Teacher;
     }
+
+
+    
     
     /**
      * Display a listing of the resource.
@@ -31,10 +35,20 @@ class TeacherController extends Controller
     {
 
 
-       return $this->Teacher->getAllTeachers();
+        $Teachers = $this->Teacher->getAllTeachers();
+        //$Teachers = Teacher::all();
+        return view('pages.Teachers.teachers',compact('Teachers'));
 
         //return view('pages.Sections.Sections', compact('Grades', 'list_Grades'));
 
+    }
+
+
+    public function create()
+    {
+         $specializations = $this->Teacher->Getspecialization();
+         $genders = $this->Teacher->GetGender();
+         return view('pages.Teachers.create',compact('specializations','genders'));
     }
 
     /**
@@ -42,30 +56,20 @@ class TeacherController extends Controller
      *
      * @return Response
      */
-    public function store(StoreSections $request)
+    public function store(StoreTeachers $request)
     {
 
-        try {
+        return $this->Teacher->StoreTeachers($request);
+      
 
-            $validated = $request->validated();
-            $Sections = new Section();
+    }
 
-            $translations = [
-                'en' => $request->Name_Section_En,
-                'ar' => $request->Name_Section_Ar,
-            ];
-            $Sections->setTranslations('name_section', $translations);
-            $Sections->grade_id = $request->Grade_id;
-            $Sections->class_id = $request->Class_id;
-            $Sections->status = 1;
-            $Sections->save();
-            toastr()->success(trans('messages.success'));
-
-            return redirect()->route('Sections.index');
-        } catch (\Exception $e) {
-            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
-        }
-
+    public function edit($id)
+    {
+        $Teachers = $this->Teacher->editTeachers($id);
+        $specializations = $this->Teacher->Getspecialization();
+        $genders = $this->Teacher->GetGender();
+        return view('pages.Teachers.edit',compact('Teachers','specializations','genders'));
     }
 
     /**
@@ -74,30 +78,10 @@ class TeacherController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(StoreSections $request)
+    public function update(StoreTeachers $request)
     {
 
-        try {
-            $validated = $request->validated();
-            $Sections = Section::findOrFail($request->id);
-
-            $Sections->name_section = ['ar' => $request->Name_Section_Ar, 'en' => $request->Name_Section_En];
-            $Sections->grade_id = $request->Grade_id;
-            $Sections->class_id = $request->Class_id;
-
-            if (isset($request->Status)) {
-                $Sections->Status = 1;
-            } else {
-                $Sections->Status = 2;
-            }
-
-            $Sections->save();
-            toastr()->success(trans('messages.Update'));
-
-            return redirect()->route('Sections.index');
-        } catch (\Exception $e) {
-            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
-        }
+        return $this->Teacher->UpdateTeachers($request);
 
     }
 
@@ -110,17 +94,9 @@ class TeacherController extends Controller
     public function destroy(request $request)
     {
 
-        Section::findOrFail($request->id)->delete();
-        toastr()->error(trans('messages.Delete'));
-        return redirect()->route('Sections.index');
+        return $this->Teacher->DeleteTeachers($request);
 
     }
 
-    public function getclasses($id)
-    {
-        $list_classes = Classroom::where("grade_id", $id)->pluck("name_class", "id");
-
-        return $list_classes;
-    }
 
 }
