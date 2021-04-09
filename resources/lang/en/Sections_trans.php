@@ -26,6 +26,7 @@ return [
     'Processes' => 'Processes',
     'Edit' => 'Edit',
     'Delete' => 'Delete',
-    'Close' => 'Close',
+    'Name_Teacher' => 'Name Teacher',
+    'Close' => 'Close', 
 
 ];

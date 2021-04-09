@@ -6,6 +6,7 @@ use App\Http\Requests\StoreSections;
 use App\Models\Classroom;
 use App\Models\Grade;
 use App\Models\Section;
+use App\Models\Teacher;
 use Illuminate\Http\Request;
 
 class SectionController extends Controller
@@ -22,8 +23,8 @@ class SectionController extends Controller
         $Grades = Grade::with(['Sections'])->get();
 
         $list_Grades = Grade::all();
-
-        return view('pages.Sections.Sections', compact('Grades', 'list_Grades'));
+        $teachers = Teacher::all();
+        return view('pages.Sections.Sections', compact('Grades', 'list_Grades','teachers'));
 
     }
 
@@ -49,6 +50,7 @@ class SectionController extends Controller
             $Sections->class_id = $request->Class_id;
             $Sections->status = 1;
             $Sections->save();
+            $Sections->teachers()->attach($request->teacher_id);
             toastr()->success(trans('messages.success'));
 
             return redirect()->route('Sections.index');
@@ -80,7 +82,12 @@ class SectionController extends Controller
             } else {
                 $Sections->Status = 2;
             }
-
+// update pivot tABLE
+if (isset($request->teacher_id)) {
+    $Sections->teachers()->sync($request->teacher_id);
+} else {
+    $Sections->teachers()->sync(array());
+}
             $Sections->save();
             toastr()->success(trans('messages.Update'));
 

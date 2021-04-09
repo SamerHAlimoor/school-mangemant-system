@@ -27,6 +27,8 @@ return [
     'Processes' => 'العمليات',
     'Edit' => 'تعديل',
     'Delete' => 'حذف',
+    'Name_Teacher' => 'اسم المعلم',
+
     'Close' => 'اغلاق',
 
 ];
