@@ -17,6 +17,8 @@ return [
     'Parents' => 'اولياء الامور',
     'List_Parents' => 'قائمة اولياء الامور',
     'Add_Parent' => 'اضافة ولي امر',
+    'add_student'=>'اضافة طالب جديد',
+    'students' => 'قائمة الطلاب',
     'Accounts' => 'الحسابات',
     'Attendance' => 'الحضور والغياب',
     'Exams' => 'الامتحانات',
