@@ -45,19 +45,23 @@ class StudentController extends Controller
     {
         //
      
-        return view('pages.Students.edit');
+        return $this->Student->editStudends($id);
     }
 
 
-    public function update(Request $request, $id)
+    public function update(StoreStudentsRequest $request)
     {
+        
+        return $this->Student->UpdateStudends($request);
+       // return $request;
+
         //
     }
 
 
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        return $this->Student->DeleteStudends($request);
     }
 
     public function Get_classrooms($id)
@@ -68,6 +72,13 @@ class StudentController extends Controller
     public function Get_Sections($id)
     {
         return $this->Student->Get_Sections($id);
+    }
+    
+    public function Get_Details($id)
+    {
+      return $this->Student->get_Student($id);
+        
+
     }
 
 }

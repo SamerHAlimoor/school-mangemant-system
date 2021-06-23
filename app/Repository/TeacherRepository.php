@@ -76,5 +76,7 @@ public function GetGender(){
         return redirect()->route('Teacher.index');
     }
 
-
+    public function get_Teacher($id){
+        return Teacher::findOrFail($id);
+     }
 }

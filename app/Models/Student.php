@@ -18,7 +18,7 @@ class Student extends Model
       return $this->belongsTo('App\Models\Specialization', 'specialization_id');
   }
 
-  // علاقة بين المعلمين والانواع لجلب جنس المعلم
+  // علاقة بين الطلاب والانواع لجلب جنس الطالب
   public function genders()
   {
       return $this->belongsTo('App\Models\Gender', 'gender_id');
