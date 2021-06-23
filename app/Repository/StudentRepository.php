@@ -52,7 +52,7 @@ class StudentRepository implements StudentRepositoryInterface{
              $students->blood_id = $request->blood_id;
              $students->Date_Birth = $request->Date_Birth;
              $students->Grade_id = $request->Grade_id;
-             $students->classroom_id  = $request->Classroom_id;
+             $students->Classroom_id  = $request->Classroom_id;
              $students->section_id = $request->section_id;
              $students->parent_id = $request->parent_id;
              $students->academic_year = $request->academic_year;
@@ -85,9 +85,18 @@ class StudentRepository implements StudentRepositoryInterface{
   
      // StoreTeachers
      public function editStudends($id){
+        $data['Grades'] = Grade::all();
+        $data['parents'] = MyParent::all();
+        $data['Genders'] = Gender::all();
+        $data['nationals'] = Nationality::all();
+        $data['bloods'] = Type_Blood::all();
+        $Students =  Student::findOrFail($id);
+        return view('pages.Students.edit',$data,compact('Students'));
+     }
+
+     public function get_Student($id){
         return Student::findOrFail($id);
      }
-  
      // UpdateTeachers
      public function UpdateStudends($request){
         try {

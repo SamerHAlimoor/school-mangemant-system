@@ -54,6 +54,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     Route::group(['namespace' => 'Teacher'], function () {
 
         Route::resource('Teacher', 'TeacherController');
+        Route::get('Teacher/details/{id}', 'TeacherController@Get_Details')->name('Teacher.details');
+
 
 
     });
@@ -68,6 +70,11 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
         Route::resource('Students', 'StudentController');
         Route::get('/Get_classrooms/{id}', 'StudentController@Get_classrooms');
         Route::get('/Get_Sections/{id}', 'StudentController@Get_Sections');
+        Route::get('Students/details/{id}', 'StudentController@Get_Details')->name('Students.details');
+
+        
+
+
     });
 
 

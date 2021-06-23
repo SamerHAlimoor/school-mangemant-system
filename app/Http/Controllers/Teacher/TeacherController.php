@@ -64,6 +64,14 @@ class TeacherController extends Controller
 
     }
 
+    public function Get_Details($id)
+    {
+      return $this->Teacher->get_Teacher($id);
+        
+
+    }
+
+
     public function edit($id)
     {
         $Teachers = $this->Teacher->editTeachers($id);

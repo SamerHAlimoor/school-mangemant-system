@@ -58,6 +58,8 @@
                                                 <td>
                                                     <a href="{{route('Students.edit',$Student->id)}}" class="btn btn-info btn-sm" role="button" aria-pressed="true"><i class="fa fa-edit"></i></a>
                                                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete_Teacher{{ $Student->id }}" title="{{ trans('Grades_trans.Delete') }}"><i class="fa fa-trash"></i></button>
+                                                    <a href="{{route('Students.details',$Student->id)}}" class="btn btn-warning btn-sm" role="button" aria-pressed="true"><i class="far fa-eye"></i></a>
+
                                                 </td>
                                             </tr>
 
@@ -68,21 +70,21 @@
                                                         {{csrf_field()}}
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h5 style="font-family: 'Cairo', sans-serif;" class="modal-title" id="exampleModalLabel">{{ trans('Teacher_trans.Delete_Teacher') }}</h5>
+                                                            <h5 style="font-family: 'Cairo', sans-serif;" class="modal-title" id="exampleModalLabel">{{ trans('Students_trans.Deleted_Student_tilte') }}</h5>
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                 <span aria-hidden="true">&times;</span>
                                                             </button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <p> {{ trans('My_Classes_trans.Warning_Grade') }}</p>
+                                                            <p> {{ trans('Students_trans.Deleted_Student') }}</p>
                                                             <input type="hidden" name="id"  value="{{$Student->id}}">
                                                         </div>
                                                         <div class="modal-footer">
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-secondary"
-                                                                        data-dismiss="modal">{{ trans('My_Classes_trans.Close') }}</button>
+                                                                        data-dismiss="modal">{{ trans('Students_trans.Close') }}</button>
                                                                 <button type="submit"
-                                                                        class="btn btn-danger">{{ trans('My_Classes_trans.submit') }}</button>
+                                                                        class="btn btn-danger">{{ trans('Students_trans.submit') }}</button>
                                                             </div>
                                                         </div>
                                                     </div>
