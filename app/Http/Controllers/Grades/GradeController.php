@@ -48,7 +48,7 @@ class GradeController extends Controller
             $Grade->notes = $request->notes;
             $Grade->save();
             toastr()->success(trans('messages.success'));
-            redirect()->route('Grades.index');
+            return redirect()->route('Grades.index');
         } catch (\Exception $e) {
             return redirect()->back()->withErrors(['error' => $e->getMessage()]);
         }
