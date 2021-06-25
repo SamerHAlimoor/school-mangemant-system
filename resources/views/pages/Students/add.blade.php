@@ -29,7 +29,7 @@
                     </div>
                 @endif
 
-                <form method="post"  action="{{ route('Students.store') }}" autocomplete="off">
+                <form method="post"  action="{{ route('Students.store') }}" autocomplete="off" enctype="multipart/form-data">
                     @csrf
                     <h6 style="font-family: 'Cairo', sans-serif;color: blue">{{trans('Students_trans.personal_information')}}</h6><br>
                         <div class="row">
@@ -164,6 +164,14 @@
                                         <option value="{{ $year}}">{{ $year }}</option>
                                     @endfor
                                 </select>
+                            </div>
+
+                           
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="academic_year">{{trans('Students_trans.Attachments')}} : <span class="text-danger">*</span></label>
+                                <input type="file" accept="application/pdf,image/*" name="photos[]" multiple>
                             </div>
                         </div>
                         </div><br>

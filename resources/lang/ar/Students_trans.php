@@ -21,6 +21,7 @@ return [
      'submit' => 'حفظ البيانات',
     'gender' => 'النوع',
     'Nationality' => 'الجنسية',
+    'Attachments' => 'المرفقات',
     'blood_type' => 'فصلية الدم',
     'Date_of_Birth' => 'تاريخ الميلاد',
     'Student_information' => 'معلومات الطالب',

@@ -49,4 +49,12 @@ public function parents()
     return $this->belongsTo('App\Models\MyParent','parent_id');
 }
 
+
+// علاقة بين الطلاب والصور لجلب اسم الصور  في جدول الطلاب
+public function images()
+{
+    return $this->morphMany('App\Models\Image', 'imageable');
+    //it used by Polymorphic 
+}
+
 }
