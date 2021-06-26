@@ -12,6 +12,7 @@ return [
     'Grades_list' => 'قائمة المراحل الدراسية',
     'classes' => 'الفصول',
     'sections' => 'الاقسام',
+    'Students_Promotions'=>'ترقية الطلاب',
     'Teachers'=>'قائمة المعلمين',
     'List_sections' => 'قائمة الاقسام الدراسية', 'students' => 'الطلاب',
     'Parents' => 'اولياء الامور',

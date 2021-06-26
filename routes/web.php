@@ -82,6 +82,12 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
     });
 
+     //==============================Promotion Students ============================
+     Route::group(['namespace' => 'Students'], function () {
+        Route::resource('Promotion', 'PromotionController');
+    });
+
+
 
 
 });

@@ -9,6 +9,7 @@ return [
     'Grades' => 'Grades',
     'Grades_list' => 'Grades List',
     'classes' => 'Classes',
+    'Students_Promotions'=>'Students Promotions',
     'List_classes' => 'List Classes',
     'sections' => 'Sections',
     'List_sections' => 'List Sections',

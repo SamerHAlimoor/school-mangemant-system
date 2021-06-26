@@ -26,5 +26,7 @@ return [
     'Processes' => 'Processes',
     'add_parent' => 'add parent',
     'list_Parent' => 'List Parents',
+    'Empty'=>'There are no any stage',
+
 
 ];
