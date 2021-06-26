@@ -76,8 +76,24 @@ class StudentController extends Controller
     
     public function Get_Details($id)
     {
-      return $this->Student->get_Student($id);
+      return $this->Student->show_Student($id);
         
+
+    }
+
+    public function Upload_attachment(Request $request)
+    {
+        return $this->Student->Upload_attachment($request);
+    }
+
+    public function Download_attachment($studentsname,$filename)
+    {
+        return $this->Student->Download_attachment($studentsname,$filename);
+    }
+
+    public function Delete_attachment(Request $request)
+    {
+        return $this->Student->Delete_attachment($request);
 
     }
 
