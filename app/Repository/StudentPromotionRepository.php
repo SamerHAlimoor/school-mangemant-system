@@ -2,19 +2,10 @@
 
 namespace App\Repository;
 
-use App\Models\Classroom;
-use App\Models\Gender;
 use App\Models\Grade;
-use App\Models\Image;
-use App\Models\MyParent;
-use App\Models\Nationality;
 use App\Models\Promotion;
-use App\Models\Section;
 use App\Models\Student;
-use App\Models\Type_Blood;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Storage;
 
 class StudentPromotionRepository implements StudentPromotionRepositoryInterface
 {
@@ -24,6 +15,11 @@ class StudentPromotionRepository implements StudentPromotionRepositoryInterface
         $Grades = Grade::all();
         return view('pages.Students.promotion.index',compact('Grades'));
     }
+    public function create()
+    {
+        $promotions = Promotion::all();
+        return view('pages.Students.promotion.management',compact('promotions'));
+    }
 
     public function store($request)
     {
@@ -31,7 +27,7 @@ class StudentPromotionRepository implements StudentPromotionRepositoryInterface
 
         try {
 
-            $students = student::where('Grade_id',$request->Grade_id)->where('Classroom_id',   $request->Classroom_id)->where('section_id',$request->section_id)->get();
+            $students = Student::where('Grade_id',$request->Grade_id)->where('Classroom_id',   $request->Classroom_id)->where('section_id',$request->section_id)->where('academic_year',$request->academic_year)->get();
 
             if($students->count() < 1){
                 return redirect()->back()->with('error_promotions', __('لاتوجد بيانات في جدول الطلاب'));
@@ -46,6 +42,7 @@ class StudentPromotionRepository implements StudentPromotionRepositoryInterface
                         'Grade_id'=>$request->Grade_id_new,
                         'Classroom_id'=>$request->Classroom_id_new,
                         'section_id'=>$request->section_id_new,
+                        'academic_year'=>$request->academic_year_new,
                     ]);
 
                 // insert in to promotions
@@ -57,6 +54,8 @@ class StudentPromotionRepository implements StudentPromotionRepositoryInterface
                     'to_grade'=>$request->Grade_id_new,
                     'to_Classroom'=>$request->Classroom_id_new,
                     'to_section'=>$request->section_id_new,
+                    'academic_year'=>$request->academic_year,
+                    'academic_year_new'=>$request->academic_year_new,
                 ]);
 
             }
@@ -71,4 +70,47 @@ class StudentPromotionRepository implements StudentPromotionRepositoryInterface
 
 
     }
+
+
+    public function destroy($request){
+
+        try {
+            DB::beginTransaction();
+
+            // التراجع عن الكل
+            if($request->page_id ==1){
+
+             $Promotions = Promotion::all();
+             foreach ($Promotions as $Promotion){
+
+                 //التحديث في جدول الطلاب
+                 $ids = explode(',',$Promotion->student_id);
+                 Student::whereIn('id', $ids)
+                 ->update([
+                 'grade_id'=>$Promotion->from_grade,
+                 'classroom_id'=>$Promotion->from_Classroom,
+                 'section_id'=> $Promotion->from_section,
+                 'academic_year'=>$Promotion->academic_year,
+               ]);
+
+                 //حذف جدول الترقيات
+                 Promotion::truncate();
+
+             }
+                DB::commit();
+                toastr()->error(trans('messages.Delete'));
+                return redirect()->back();
+
+
+            }
+
+        }
+
+        catch (\Exception $e) {
+            DB::rollback();
+            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+        }
+    }
+
+
 }

@@ -24,6 +24,7 @@ class PromotionController extends Controller
     public function create()
     {
         //
+        return $this->Promotion->create();
     }
 
 
@@ -72,9 +73,11 @@ class PromotionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
         //
+        return $this->Promotion->destroy($request);
+
     }
 
 }
