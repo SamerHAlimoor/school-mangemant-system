@@ -194,4 +194,13 @@ class StudentRepository implements StudentRepositoryInterface
         toastr()->error(trans('messages.Delete'));
         return redirect()->route('Students.details',$request->student_id);
     }
+
+
+    public function graduation($request)
+    {
+        Student::findOrFail($request->id)->delete();
+        toastr()->warning(trans('messages.graduuated'));
+        return redirect()->route('Students.index');
+       
+    }
 }

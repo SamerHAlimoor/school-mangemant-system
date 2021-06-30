@@ -31,6 +31,11 @@ return [
     'created_at' => 'تاريخ الاضافة',
     'Download' => 'تحميل',
     'delete' => 'حذف',
+    'gardauation' => 'تخرج الطلاب',
+    'is_gardauation' => 'هل تريد تخريج الطالب ',
+
+    
+    
 
 
 

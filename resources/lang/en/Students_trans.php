@@ -32,7 +32,8 @@ return [
     'created_at' => 'Created at',
     'Download' => 'Download',
     'delete' => 'Delete',
-
+    'gardauation' => 'Student Graduation',
+    'is_gardauation' => 'Do you want to Graduate this Student? ',
     
 
 ]; 

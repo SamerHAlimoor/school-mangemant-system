@@ -115,7 +115,7 @@
                                                         <label
                                                             for="exampleFormControlTextarea1">{{ trans('Grades_trans.Notes') }}
                                                             :</label>
-                                                        <textarea class="form-control" name="notes"
+                                                        <textarea class="form-control" name="Notes"
                                                                   id="exampleFormControlTextarea1"
                                                                   rows="3">{{ $grade->notes }}</textarea>
                                                     </div>
