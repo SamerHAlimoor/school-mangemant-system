@@ -68,9 +68,13 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
       //==============================Students============================
       Route::group(['namespace' => 'Students'], function () {
         Route::resource('Students', 'StudentController');
+        Route::resource('Graduated', 'GraduatedController');
+        Route::resource('Promotion', 'PromotionController');
+        Route::resource('Fees', 'Fees\FeesController');
+        Route::post('/graduation', 'StudentController@graduation')->name('Students.graduation');
         Route::get('/Get_classrooms/{id}', 'StudentController@Get_classrooms');
         Route::get('/Get_Sections/{id}', 'StudentController@Get_Sections');
-        Route::get('Students/details/{id}', 'StudentController@Get_Details')->name('Students.details');
+        Route::get('/details/{id}', 'StudentController@Get_Details')->name('Students.details');
 //Attachment in student
         Route::post('Upload_attachment', 'StudentController@Upload_attachment')->name('Upload_attachment');
         Route::get('Download_attachment/{studentsname}/{filename}', 'StudentController@Download_attachment')->name('Download_attachment');
@@ -83,10 +87,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     });
 
      //==============================Promotion Students ============================
-     Route::group(['namespace' => 'Students'], function () {
+   /*  Route::group(['namespace' => 'Students'], function () {
         Route::resource('Promotion', 'PromotionController');
     });
-
+*/
 
 
 

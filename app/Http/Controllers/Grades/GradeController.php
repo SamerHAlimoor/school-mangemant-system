@@ -45,7 +45,7 @@ class GradeController extends Controller
             $Grade->setTranslations('Name', $translations);
              */
             $Grade->name = ['en' => $request->name_en, 'ar' => $request->name];
-            $Grade->notes = $request->notes;
+            $Grade->notes = $request->Notes;
             $Grade->save();
             toastr()->success(trans('messages.success'));
             return redirect()->route('Grades.index');
@@ -69,7 +69,7 @@ class GradeController extends Controller
             $grades = Grade::findOrFail($request->id);
             $grades->update([
 
-                $grades->notes = $request->notes,
+                $grades->notes = $request->Notes,
             ]);
             $translations = [
                 'en' => $request->name_en,

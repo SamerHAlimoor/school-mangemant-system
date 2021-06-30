@@ -97,6 +97,14 @@ class StudentController extends Controller
 
     }
 
+
+    public function graduation(Request $request)
+    {
+        //
+        return $this->Student->graduation($request);
+
+    }
+
 }
 
 

@@ -73,9 +73,9 @@ class StudentPromotionRepository implements StudentPromotionRepositoryInterface
 
 
     public function destroy($request){
+        DB::beginTransaction();
 
         try {
-            DB::beginTransaction();
 
             // التراجع عن الكل
             if($request->page_id ==1){
@@ -102,6 +102,22 @@ class StudentPromotionRepository implements StudentPromotionRepositoryInterface
                 return redirect()->back();
 
 
+            }else{
+
+                $Promotion = Promotion::findorfail($request->id);
+                Student::where('id', $Promotion->student_id)
+                    ->update([
+                        'grade_id'=>$Promotion->from_grade,
+                        'classroom_id'=>$Promotion->from_Classroom,
+                        'section_id'=> $Promotion->from_section,
+                        'academic_year'=>$Promotion->academic_year,
+                    ]);
+
+
+                Promotion::destroy($request->id);
+                DB::commit();
+                toastr()->error(trans('messages.Delete'));
+                return redirect()->back();
             }
 
         }

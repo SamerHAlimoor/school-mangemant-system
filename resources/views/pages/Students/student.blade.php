@@ -59,10 +59,13 @@
                                                     <a href="{{route('Students.edit',$Student->id)}}" class="btn btn-info btn-sm" role="button" aria-pressed="true"><i class="fa fa-edit"></i></a>
                                                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete_Teacher{{ $Student->id }}" title="{{ trans('Grades_trans.Delete') }}"><i class="fa fa-trash"></i></button>
                                                     <a href="{{route('Students.details',$Student->id)}}" class="btn btn-warning btn-sm" role="button" aria-pressed="true"><i class="far fa-eye"></i></a>
+                                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#graduation_student{{ $Student->id }}" title="تخريج الطالب"><i class="fa fa-graduation-cap"></i></button>
+
 
                                                 </td>
                                             </tr>
-
+                                            
+                                            @include('pages.Students.Graduated.graduation')
                                             <div class="modal fade" id="delete_Teacher{{$Student->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog" role="document">
                                                     <form action="{{route('Students.destroy','test')}}" method="post">
