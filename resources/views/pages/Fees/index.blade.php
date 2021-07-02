@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-    الرسوم الدراسية
+{{ trans('Fees_trans.study_fees') }}
 @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    الرسوم الدراسية
+{{ trans('Fees_trans.study_fees') }}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -22,21 +22,26 @@
                         <div class="card card-statistics h-100">
                             <div class="card-body">
                                 <a href="{{route('Fees.create')}}" class="btn btn-success btn-sm" role="button"
-                                   aria-pressed="true">اضافة رسوم جديدة</a><br><br>
+                                   aria-pressed="true">{{ trans('Fees_trans.add_new_fees') }}
+                                </a><br><br>
                                 <div class="table-responsive">
                                     <table id="datatable" class="table  table-hover table-sm table-bordered p-0"
                                            data-page-length="50"
                                            style="text-align: center">
                                         <thead>
                                         <tr class="alert-success">
+                                          
                                             <th>#</th>
-                                            <th>الاسم</th>
-                                            <th>المبلغ</th>
-                                            <th>المرحلة الدراسية</th>
-                                            <th>الصف الدراسي</th>
-                                            <th>السنة الدراسية</th>
-                                            <th>ملاحظات</th>
-                                            <th>العمليات</th>
+                                            <th>  {{ trans('Fees_trans.name') }}</th>
+                                            <th>{{ trans('Fees_trans.amount') }}</th>
+                                            
+                                            <th>{{ trans('Fees_trans.educational_level') }}</th>
+                                            
+                                            <th>{{ trans('Fees_trans.classroom') }}</th>
+                                            
+                                            <th>{{ trans('Fees_trans.academic_year') }}</th>
+                                            <th>{{ trans('Fees_trans.notes') }}</th>
+                                            <th>{{ trans('Fees_trans.processes') }}</th>
                                         </tr>
                                         </thead>
                                         <tbody>

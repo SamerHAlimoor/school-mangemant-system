@@ -23,7 +23,6 @@ return [
     'Graduate_students' => 'الطلاب الخريجين',
     'Add_Parent' => 'اضافة ولي امر',
     'add_student'=>'اضافة طالب جديد',
-    'students' => 'قائمة الطلاب',
     'Students_Promotions'=>'ترقية الطلاب',
     'add_Promotion'=>'اضافة ترقية جديدة',
     'list_Promotions'=>'قائمة الترقيات',

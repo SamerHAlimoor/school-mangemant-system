@@ -38,9 +38,10 @@ class FeesRepository implements FeesRepositoryInterface
 
             $fees = new Fee();
             $fees->title = ['en' => $request->title_en, 'ar' => $request->title_ar];
-            $fees->amount  =$request->amount;
+            $fees->amount  =$request->amount; 
             $fees->grade_id  =$request->Grade_id;
             $fees->classroom_id  =$request->Classroom_id;
+            $fees->Fee_type  =$request->Fee_type;
             $fees->description  =$request->description;
             $fees->year  =$request->year;
             $fees->save();
@@ -62,6 +63,7 @@ class FeesRepository implements FeesRepositoryInterface
             $fees->amount  =$request->amount;
             $fees->grade_id  =$request->Grade_id;
             $fees->classroom_id  =$request->Classroom_id;
+            $fees->Fee_type  =$request->Fee_type;
             $fees->description  =$request->description;
             $fees->year  =$request->year;
             $fees->save();

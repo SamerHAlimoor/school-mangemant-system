@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-    {{trans('main_trans.Teachers')}}
+{{trans('Students_trans.Student')}}
 @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    {{trans('main_trans.Teachers')}}
+{{trans('Students_trans.Student')}}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -37,7 +37,7 @@
                                             <th>{{trans('Students_trans.Grade')}}</th>
                                             <th>{{trans('Students_trans.classrooms')}}</th>
                                             <th>{{trans('Students_trans.section')}}</th>
-                                            <th>العمليات</th>
+                                            <th>  {{trans('Students_trans.Processes')}}      </th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -56,11 +56,20 @@
                                           
 
                                                 <td>
-                                                    <a href="{{route('Students.edit',$Student->id)}}" class="btn btn-info btn-sm" role="button" aria-pressed="true"><i class="fa fa-edit"></i></a>
-                                                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete_Teacher{{ $Student->id }}" title="{{ trans('Grades_trans.Delete') }}"><i class="fa fa-trash"></i></button>
-                                                    <a href="{{route('Students.details',$Student->id)}}" class="btn btn-warning btn-sm" role="button" aria-pressed="true"><i class="far fa-eye"></i></a>
-                                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#graduation_student{{ $Student->id }}" title="تخريج الطالب"><i class="fa fa-graduation-cap"></i></button>
+                                                    <div class="dropdown show">
+                                                        <a class="btn btn-success btn-md dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            {{trans('Students_trans.Processes')}}      
+                                                        </a>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                            <a class="dropdown-item" href="{{route('Students.details',$Student->id)}}"><i style="color: #ffc107" class="far fa-eye "></i>&nbsp;  عرض بيانات الطالب</a>
+                                                            <a class="dropdown-item" href="{{route('Students.edit',$Student->id)}}"><i style="color:green" class="fa fa-edit"></i>&nbsp;  تعديل بيانات الطالب</a>
+                                                            <a class="dropdown-item" data-toggle="modal" data-target="#graduation_student{{ $Student->id }}"><i style="color: #0000cc" class="fa fa-edit"></i>&nbsp;تخريج الطالب &nbsp;</a>
+                                                            <a class="dropdown-item" data-target="#delete_Teacher{{ $Student->id }}" data-toggle="modal" ><i style="color: rgb(240, 36, 29)" class="fa fa-trash"></i>&nbsp;  حذف الطالب</a>
+                                                            <a class="dropdown-item" href="{{route('Fees_Invoices.show',$Student->id)}}"><i style="color: #0000cc" class="fa fa-edit"></i>&nbsp;اضافة فاتورة رسوم&nbsp;</a>
 
+                                                        </div>
+                                                    </div>
+                                                   
 
                                                 </td>
                                             </tr>
