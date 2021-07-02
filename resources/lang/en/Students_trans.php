@@ -32,7 +32,22 @@ return [
     'created_at' => 'Created at',
     'Download' => 'Download',
     'delete' => 'Delete',
+    'old_school_stage' => 'Old School Stage',
+    'new_school_stage' => 'The New School Stage',
+    'Student' => ' Students',
+
+    'previous_school_stage' => 'Previous School Stage',
+    'current_school_stage' => 'Current School Stage',
+    'previous_school_year' => 'Previous School Year',
+    'new_school_year' => 'Current School Year',
+    'previous_class' => 'Previous Class',
+    'current_class' => 'Current Class',
+    'previous_section' => 'Previous Section',
+    'current_section' => 'Current Section',
     'gardauation' => 'Student Graduation',
+    'student_return' => 'Student Return',
+    'Student_graduation' => 'Students Graduation',
+    'undo_all' => 'Undo All',
     'is_gardauation' => 'Do you want to Graduate this Student? ',
     
 

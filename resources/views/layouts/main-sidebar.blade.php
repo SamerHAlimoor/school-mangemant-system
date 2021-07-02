@@ -73,8 +73,8 @@
                             <li>
                                 <a href="javascript:void(0);" data-toggle="collapse" data-target="#Students_upgrade">{{trans('main_trans.Students_Promotions')}}<div class="pull-right"><i class="ti-plus"></i></div><div class="clearfix"></div></a>
                                 <ul id="Students_upgrade" class="collapse">
-                                    <li> <a href="{{route('Promotion.index')}}">{{trans('main_trans.add_Promotion')}}</a></li>
-                                    <li> <a href="{{route('Promotion.create')}}">{{trans('main_trans.list_Promotions')}}</a> </li>
+                                    <li> <a href="{{route('Promotion.index')}}">{{trans('main_trans.list_Promotions')}}</a></li>
+                                    <li> <a href="{{route('Promotion.create')}}">{{trans('main_trans.add_Promotion')}}</a> </li>
                                 </ul>
                             </li>
 
@@ -101,7 +101,7 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Teachers-menu" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="{{route('Teacher.index')}}">{{trans('main_trans.Teachers')}}</a> </li>
+                            <li> <a href="{{route('Teacher.index')}}">{{trans('main_trans.Teachers_list')}}</a> </li>
                         </ul>
                     </li>
 
@@ -128,8 +128,8 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Accounts-menu" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="calendar.html">Events Calendar </a> </li>
-                            <li> <a href="{{route('Fees.index')}}">الرسوم الدراسية</a> </li>
+                            <li> <a href="{{route('Fees.index')}}">{{ trans('Fees_trans.study_fees') }}
+                            </a> </li>
                         </ul>
                     </li>
 

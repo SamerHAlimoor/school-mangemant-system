@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-    {{trans('main_trans.list_students')}}
+    {{trans('main_trans.list_Promotions')}}
 @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    {{trans('main_trans.list_students')}}
+    {{trans('main_trans.list_Promotions')}}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -23,7 +23,7 @@
                             <div class="card-body">
 
                                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Delete_all">
-                                   تراجع الكل
+                                      {{trans('Students_trans.undo_all')}} 
                                 </button>
                                 <br><br>
 
@@ -36,14 +36,14 @@
                                         <tr>
                                             <th class="alert-info">#</th>
                                             <th class="alert-info">{{trans('Students_trans.name')}}</th>
-                                            <th class="alert-danger">المرحلة الدراسية السابقة</th>
-                                            <th class="alert-danger">السنة الدراسية</th>
-                                            <th class="alert-danger">الصف الدراسي السابق</th>
-                                            <th class="alert-danger">القسم الدراسي السابق</th>
-                                            <th class="alert-success">المرحلة الدراسية الحالي</th>
-                                            <th class="alert-success">السنة الدراسية الحالية</th>
-                                            <th class="alert-success">الصف الدراسي الحالي</th>
-                                            <th class="alert-success">القسم الدراسي الحالي</th>
+                                            <th class="alert-danger">{{trans('Students_trans.previous_school_stage')}}</th>
+                                            <th class="alert-danger">{{trans('Students_trans.previous_school_year')}}</th>
+                                            <th class="alert-danger">{{trans('Students_trans.previous_class')}}</th>
+                                            <th class="alert-danger">{{trans('Students_trans.previous_section')}}</th>
+                                            <th class="alert-danger">{{trans('Students_trans.current_school_stage')}}</th>
+                                            <th class="alert-danger">{{trans('Students_trans.new_school_year')}}</th>
+                                            <th class="alert-danger">{{trans('Students_trans.current_class')}}</th>
+                                            <th class="alert-danger">{{trans('Students_trans.current_section')}}</th>
                                             <th>{{trans('Students_trans.Processes')}}</th>
                                         </tr>
                                         </thead>
@@ -61,12 +61,22 @@
                                                 <td>{{$promotion->t_classroom->name_class}}</td>
                                                 <td>{{$promotion->t_section->name_section}}</td>
                                                 <td>
-                                                    <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#Delete_one{{$promotion->id}}">ارجاع الطالب</button>
-                                                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#">تخرج الطالب</button>
+                                                    <div class="dropdown show">
+                                                        <a class="btn btn-success btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            {{trans('Students_trans.Processes')}}                                                      
+                                                          </a>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                            <a class="dropdown-item"  data-toggle="modal"  data-target="#Delete_one{{$promotion->id}}"><i style="color: #ffc107" class="far fa-eye "></i>&nbsp; {{trans('Students_trans.student_return')}}</a>
+                                                            <a class="dropdown-item"  data-toggle="modal" data-target="#graduation_student{{ $promotion->id }}"><i style="color:green" class="fa fa-edit"></i>&nbsp;  {{trans('Students_trans.Student_graduation')}}</a>
+                                                            </div>
+                                                    </div>
+                                                   
                                                 </td>
                                             </tr>
                                    @include('pages.Students.promotion.Delete_all')
                                    @include('pages.Students.promotion.Delete_one')
+                                   @include('pages.Students.promotion.graduation')
+
                                         @endforeach
                                     </table>
                                 </div>
