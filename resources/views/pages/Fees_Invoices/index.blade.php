@@ -48,8 +48,8 @@
                                             <td>{{$Fee_invoice->classroom->name_class}}</td>
                                             <td>{{$Fee_invoice->description}}</td>
                                                 <td>
-                                                    <a href="#" class="btn btn-info btn-sm" role="button" aria-pressed="true"><i class="fa fa-edit"></i></a>
-                                                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#" ><i class="fa fa-trash"></i></button>
+                                                    <a href="{{route('Fees_Invoices.edit',$Fee_invoice->id)}}" class="btn btn-info btn-sm" role="button" aria-pressed="true"><i class="fa fa-edit"></i></a>
+                                                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#Delete_Fee_invoice{{$Fee_invoice->id}}" ><i class="fa fa-trash"></i></button>
                                                 </td>
                                             </tr>
                                         @endforeach
