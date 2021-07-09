@@ -29,37 +29,20 @@
                         </div>
                     @endif
 
-                    <form action="{{route('Fees.update','test')}}" method="post" autocomplete="off">
+                    <form action="{{route('Fees_Invoices.update','test')}}" method="post" autocomplete="off">
                         @method('PUT')
                         @csrf
                         <div class="form-row">
                             <div class="form-group col">
-                                <label for="inputEmail4">الاسم باللغة العربية</label>
-                                <input type="text" value="{{$fee->getTranslation('title','ar')}}" name="title_ar" class="form-control">
-                                <input type="hidden" value="{{$fee->id}}" name="id" class="form-control">
+                                <label for="inputEmail4">اسم الطالب</label>
+                                <input type="text" value="{{$fee_invoices->student->name}}" readonly name="title_ar" class="form-control">
+                                <input type="hidden" value="{{$fee_invoices->id}}" name="id" class="form-control">
                             </div>
 
-                            <div class="form-group col">
-                                <label for="inputEmail4">الاسم باللغة الانجليزية</label>
-                                <input type="text" value="{{$fee->getTranslation('title','en')}}" name="title_en" class="form-control">
-                            </div>
-                        </div>
-
-                            <div class="form-row">
 
                             <div class="form-group col">
                                 <label for="inputEmail4">المبلغ</label>
-                                <input type="number" value="{{$fee->amount}}" name="amount" class="form-control">
-                            </div>
-
-                            <div class="form-group col">
-                                <label for="inputEmail4">نوع الرسوم</label>
-                                <select class="custom-select mr-sm-2" name="Fee_type">
-                                    <option value="1">{{ trans('Fees_trans.the_study_fees') }} </option>
-                                    <option value="2">{{ trans('Fees_trans.uniform_fee') }}</option>
-                                    <option value="3">{{ trans('Fees_trans.bus_fees') }} </option>
-
-                                </select>
+                                <input type="number" value="{{$fee_invoices->amount}}" name="amount" class="form-control">
                             </div>
 
                         </div>
@@ -68,37 +51,19 @@
                         <div class="form-row">
 
                             <div class="form-group col">
-                                <label for="inputState">المرحلة الدراسية</label>
-                                <select class="custom-select mr-sm-2" name="Grade_id">
-                                    @foreach($Grades as $Grade)
-                                        <option value="{{ $Grade->id }}" {{$Grade->id == $fee->Grade_id ? 'selected' : ""}}>{{ $Grade->name }}</option>
+                                <label for="inputZip">نوع الرسوم</label>
+                                <select class="custom-select mr-sm-2" name="fee_id">
+                                    @foreach($fees as $fee)
+                                        <option value="{{$fee->id}}" {{$fee->id == $fee_invoices->fee_id ? 'selected':"" }}>{{$fee->title}}</option>
                                     @endforeach
                                 </select>
                             </div>
 
-                            <div class="form-group col">
-                                <label for="inputZip">الصف الدراسي</label>
-                                <select class="custom-select mr-sm-2" name="Classroom_id">
-                                    <option value="{{$fee->Classroom_id}}">{{$fee->classroom->name_class}}</option>
-                                </select>
-                            </div>
-                            <div class="form-group col">
-                                <label for="inputZip">السنة الدراسية</label>
-                                <select class="custom-select mr-sm-2" name="year">
-                                    @php
-                                        $current_year = date("Y")
-                                    @endphp
-                                    @for($year=$current_year; $year<=$current_year +1 ;$year++)
-                                        <option value="{{ $year}}" {{$year == $fee->year ? 'selected' : ' '}}>{{ $year }}</option>
-                                    @endfor
-                                </select>
-                            </div>
                         </div>
 
                         <div class="form-group">
                             <label for="inputAddress">ملاحظات</label>
-                            <textarea class="form-control" name="description" id="exampleFormControlTextarea1"
-                                      rows="4">{{$fee->description}}</textarea>
+                            <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="4">{{$fee_invoices->description}}</textarea>
                         </div>
                         <br>
 
