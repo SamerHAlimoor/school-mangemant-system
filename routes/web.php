@@ -72,6 +72,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
         Route::resource('Promotion', 'PromotionController');
         Route::resource('Fees', 'Fees\FeesController');
         Route::resource('Fees_Invoices', 'FeesInvoicesController');
+        Route::resource('receipt_students', 'ReceiptStudentsController');
+
+        Route::resource('Payment_students', 'PaymentController');
         Route::post('/graduation', 'StudentController@graduation')->name('Students.graduation');
         Route::get('/Get_classrooms/{id}', 'StudentController@Get_classrooms');
         Route::get('/Get_Sections/{id}', 'StudentController@Get_Sections');
