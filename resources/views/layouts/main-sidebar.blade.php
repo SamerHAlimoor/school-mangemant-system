@@ -130,6 +130,10 @@
                         <ul id="Accounts-menu" class="collapse" data-parent="#sidebarnav">
                             <li> <a href="{{route('Fees.index')}}">{{ trans('Fees_trans.study_fees') }}
                             </a> </li>
+                            <li> <a href="{{route('Fees_Invoices.index')}}">الفواتير</a> </li>
+                            <li> <a href="{{route('receipt_students.index')}}">سندات القبض</a> </li>
+                            <li> <a href="{{route('ProcessingFee.index')}}">استبعاد رسوم</a> </li>
+
                         </ul>
                     </li>
 
