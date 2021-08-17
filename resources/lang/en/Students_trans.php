@@ -35,6 +35,7 @@ return [
     'old_school_stage' => 'Old School Stage',
     'new_school_stage' => 'The New School Stage',
     'Student' => ' Students',
+    'balance' => ' Balance',
 
     'previous_school_stage' => 'Previous School Stage',
     'current_school_stage' => 'Current School Stage',

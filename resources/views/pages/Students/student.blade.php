@@ -37,6 +37,8 @@
                                             <th>{{trans('Students_trans.Grade')}}</th>
                                             <th>{{trans('Students_trans.classrooms')}}</th>
                                             <th>{{trans('Students_trans.section')}}</th>
+                                            <th>  {{trans('Students_trans.balance')}}      </th>
+
                                             <th>  {{trans('Students_trans.Processes')}}      </th>
                                         </tr>
                                         </thead>
@@ -53,7 +55,8 @@
                                             <td>{{$Student->Grade->name}}</td>
                                             <td>{{$Student->Classrooms->name_class}}</td>
                                             <td>{{$Student->Sections->name_section}}</td>
-                                          
+                                            <td> {{ number_format($Student->student_account->sum('debit') - $Student->student_account->sum('credit'), 2) }}</td>
+                                           
 
                                                 <td>
                                                     <div class="dropdown show">
@@ -67,6 +70,7 @@
                                                             <a class="dropdown-item" href="{{route('Fees_Invoices.show',$Student->id)}}"><i style="color: #0000cc" class="fa fa-edit"></i>&nbsp;اضافة فاتورة رسوم&nbsp;</a>
                                                             <a class="dropdown-item" href="{{route('receipt_students.show',$Student->id)}}"><i style="color: #9dc8e2" class="fas fa-money-bill-alt"></i>&nbsp; &nbsp;سند قبض</a>
                                                             <a class="dropdown-item" href="{{route('ProcessingFee.show',$Student->id)}}"><i style="color: #9dc8e2" class="fas fa-money-bill-alt"></i>&nbsp; &nbsp; استبعاد رسوم</a>
+                                                            <a class="dropdown-item" href="{{route('Payment_students.show',$Student->id)}}"><i style="color:goldenrod" class="fas fa-donate"></i>&nbsp; &nbsp;سند صرف</a>
                                                             <a class="dropdown-item" data-target="#delete_Teacher{{ $Student->id }}" data-toggle="modal" ><i style="color: rgb(240, 36, 29)" class="fa fa-trash"></i>&nbsp;  حذف الطالب</a>
 
 
