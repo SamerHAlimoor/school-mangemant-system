@@ -12,7 +12,13 @@ return [
     'processes'=>'العمليات',
     'uniform_fee'=>'رسوم الزي المدرسي',
     'the_study_fees'=>' الرسوم الدراسية ',
-    'bus_fees'=>' رسوم الباص المدرسي',
-   
+    'invoices'=>'الفواتير',
+    'receipt'=>'سندات القبض',
+    'Fee_exclusion'=>' استبعاد الرسوم',
+    'Bills_of_exchange'=>'سندات الصرف',
+
+
+
+    
     
 ];

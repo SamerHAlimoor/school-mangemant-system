@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Repository;
+
+use App\Models\ProcessingFee;
 use App\Models\Student;
 use App\Models\StudentAccount;
 use Illuminate\Support\Facades\DB;

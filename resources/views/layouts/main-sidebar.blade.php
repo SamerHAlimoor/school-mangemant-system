@@ -130,6 +130,11 @@
                         <ul id="Accounts-menu" class="collapse" data-parent="#sidebarnav">
                             <li> <a href="{{route('Fees.index')}}">{{ trans('Fees_trans.study_fees') }}
                             </a> </li>
+                            <li> <a href="{{route('Fees_Invoices.index')}}">{{ trans('Fees_trans.invoices') }}</a> </li>
+                            <li> <a href="{{route('receipt_students.index')}}">{{ trans('Fees_trans.receipt') }}</a> </li>
+                            <li> <a href="{{route('ProcessingFee.index')}}">{{ trans('Fees_trans.Fee_exclusion') }}</a> </li>
+                            <li> <a href="{{route('Payment_students.index')}}">{{ trans('Fees_trans.Bills_of_exchange') }}</a> </li>
+
                         </ul>
                     </li>
 
@@ -141,13 +146,22 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Attendance-icon" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="fontawesome-icon.html">font Awesome</a> </li>
-                            <li> <a href="themify-icons.html">Themify icons</a> </li>
-                            <li> <a href="weather-icon.html">Weather icons</a> </li>
+                            <li> <a href="{{route('Attendance.index')}}">قائمة حضور الطلاب</a> </li>
                         </ul>
                     </li>
-
-                    <!-- Exams-->
+                    <!-- Subjects-->
+                    <li>
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#Subjects">
+                            
+                            <div class="pull-left"><i class="fas fa-book-open"></i><span class="right-nav-text">{{trans('main_trans.subjects')}}</span></div>
+                            <div class="pull-right"><i class="ti-plus"></i></div>
+                            <div class="clearfix"></div>
+                        </a>
+                        <ul id="Subjects" class="collapse" data-parent="#sidebarnav">
+                            <li> <a href="{{route('subjects.index')}}">{{trans('main_trans.List_subjects')}}</a> </li>
+                        </ul>
+                    </li>
+                    <!-- Quizzes-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Exams-icon">
                             <div class="pull-left"><i class="fas fa-book-open"></i><span class="right-nav-text">{{trans('main_trans.Exams')}}</span></div>
@@ -155,12 +169,10 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Exams-icon" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="fontawesome-icon.html">font Awesome</a> </li>
-                            <li> <a href="themify-icons.html">Themify icons</a> </li>
-                            <li> <a href="weather-icon.html">Weather icons</a> </li>
+                            <li> <a href="{{route('Quizzes.index')}}">قائمة الاختبارات</a> </li>
+                            <li> <a href="{{route('questions.index')}}">قائمة الاسئلة</a> </li>
                         </ul>
                     </li>
-
 
                     <!-- library-->
                     <li>
@@ -170,9 +182,8 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="library-icon" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="fontawesome-icon.html">font Awesome</a> </li>
-                            <li> <a href="themify-icons.html">Themify icons</a> </li>
-                            <li> <a href="weather-icon.html">Weather icons</a> </li>
+                            <li> <a href="{{route('library.index')}}">قائمة الكتب</a> </li>
+
                         </ul>
                     </li>
 
@@ -185,26 +196,13 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Onlineclasses-icon" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="fontawesome-icon.html">font Awesome</a> </li>
-                            <li> <a href="themify-icons.html">Themify icons</a> </li>
-                            <li> <a href="weather-icon.html">Weather icons</a> </li>
+                            <li> <a href="{{route('online_classes.index')}}">الاتصال مباشر مع زوم</a> </li>
+                            <li> <a href="themify-icons.html">الاتصال الغير مباشر مع زوم</a> </li>
                         </ul>
                     </li>
 
 
-                    <!-- Settings-->
-                    <li>
-                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#Settings-icon">
-                            <div class="pull-left"><i class="fas fa-cogs"></i><span class="right-nav-text">{{trans('main_trans.Settings')}}</span></div>
-                            <div class="pull-right"><i class="ti-plus"></i></div>
-                            <div class="clearfix"></div>
-                        </a>
-                        <ul id="Settings-icon" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="fontawesome-icon.html">font Awesome</a> </li>
-                            <li> <a href="themify-icons.html">Themify icons</a> </li>
-                            <li> <a href="weather-icon.html">Weather icons</a> </li>
-                        </ul>
-                    </li>
+                   
 
 
                     <!-- Users-->
@@ -219,6 +217,13 @@
                             <li> <a href="themify-icons.html">Themify icons</a> </li>
                             <li> <a href="weather-icon.html">Weather icons</a> </li>
                         </ul>
+                    </li>
+
+
+                     <!-- Settings-->
+                     <li>
+                        <a href="{{route('settings.index')}}"><i class="fas fa-cogs"></i><span class="right-nav-text">{{trans('main_trans.Settings')}} </span></a>
+
                     </li>
 
                 </ul>

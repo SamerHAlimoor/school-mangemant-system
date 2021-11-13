@@ -23,7 +23,8 @@ return [
      'Close' => 'اغلاق',
     'Attachments' => 'المرفقات',
     'Student_details' => 'معلومات الطالب',    
-    'Student' => ' الطلاب',
+    'Student' => ' الطلاب', 
+    'balance' => ' الرصيد',
 
     'Deleted_Student' => 'حذف بيانات الطالب',
     'Deleted_Student_tilte' => 'هل انت متأكد من حذف الطالب ؟',
