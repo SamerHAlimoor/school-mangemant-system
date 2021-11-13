@@ -15,7 +15,11 @@ return [
     'uniform_fee'=>'School Uniform Fees',
     'the_study_fees'=>' The Study Fees',
     'study_fees'=>' The School Bus Fees',
-   
+    
+    'invoices'=>'Invoices',
+    'receipt'=>'Receipt',
+    'Fee_exclusion'=>' Fee exclusion',
+    'Bills_of_exchange'=>'Bills of exchange',
    
    
 

@@ -69,12 +69,15 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
       Route::group(['namespace' => 'Students'], function () {
         Route::resource('Students', 'StudentController');
         Route::resource('Graduated', 'GraduatedController');
+        Route::resource('online_classes', 'OnlineClasseController');
         Route::resource('Promotion', 'PromotionController');
         Route::resource('Fees', 'Fees\FeesController');
         Route::resource('Fees_Invoices', 'FeesInvoicesController');
         Route::resource('receipt_students', 'ReceiptStudentsController');
         Route::resource('ProcessingFee', 'ProcessingFeeController');
-
+        Route::resource('Attendance', 'AttendanceController');
+        Route::get('download_file/{filename}', 'LibraryController@downloadAttachment')->name('downloadAttachment');
+        Route::resource('library', 'LibraryController');
         Route::resource('Payment_students', 'PaymentController');
         Route::post('/graduation', 'StudentController@graduation')->name('Students.graduation');
         Route::get('/Get_classrooms/{id}', 'StudentController@Get_classrooms');
@@ -84,6 +87,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
         Route::post('Upload_attachment', 'StudentController@Upload_attachment')->name('Upload_attachment');
         Route::get('Download_attachment/{studentsname}/{filename}', 'StudentController@Download_attachment')->name('Download_attachment');
         Route::post('Delete_attachment', 'StudentController@Delete_attachment')->name('Delete_attachment');
+          //==============================Subjects============================
+   
+
 
 
         
@@ -91,6 +97,27 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
     });
 
+    Route::group(['namespace' => 'Subjects'], function () {
+        Route::resource('subjects', 'SubjectController');
+    });
+    Route::group(['namespace' => 'Exams'], function () {
+        Route::resource('Exams', 'ExamController');
+    });
+    Route::group(['namespace' => 'Quizzes'], function () {
+        Route::resource('Quizzes', 'QuizzController');
+    });
+  
+ //==============================questions============================
+ Route::group(['namespace' => 'questions'], function () {
+    Route::resource('questions', 'QuestionController');
+});
+
+
+ //==============================Setting============================
+ Route::resource('settings', 'SettingController');
+
+
+ 
      //==============================Promotion Students ============================
    /*  Route::group(['namespace' => 'Students'], function () {
         Route::resource('Promotion', 'PromotionController');

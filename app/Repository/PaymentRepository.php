@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Models\FundAccount;
 use App\Models\PaymentStudent;
 use App\Models\Student;
 use App\Models\StudentAccount;

@@ -36,5 +36,9 @@ return [
     'list_Promotions'=>'List Promotions',
     'Copyright' => 'Copyright',
     'Name_Programer' => 'Samer Alimoor  All Rights Reserved',
+    'subjects'=>'Subjects',
+    'List_subjects'=>'List Subjects',
+    'list_exams'=>'List Exams',
+
 
 ];
