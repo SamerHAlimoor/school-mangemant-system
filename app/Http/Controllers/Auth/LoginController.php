@@ -3,38 +3,55 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\Http\Traits\AuthTrait;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
+    
 
-    use AuthenticatesUsers;
+    //
+    //use AuthenticatesUsers;
+ use AuthTrait;
+   
+ public function __construct()
+ {
+     $this->middleware('guest')->except('logout');
+ }
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    protected $redirectTo = RouteServiceProvider::HOME;
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public function formLogin($type)
     {
-        $this->middleware('guest')->except('logout');
+        return view('auth.login',compact('type'));
     }
+
+    public function login(Request $request){
+
+
+        //return $request;
+        if (Auth::guard($this->checkGuard($request))->attempt(['email' => $request->email, 'password' => $request->password])) {
+           return $this->redirect($request);
+        }
+
+    }
+
+    
+       
+    
+    public function logout(Request $request,$type)
+    {
+       
+     //  return $type;
+       //  return $request;
+       Auth::guard($type)->logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+          return redirect('/');
+    }
+
+    
 }

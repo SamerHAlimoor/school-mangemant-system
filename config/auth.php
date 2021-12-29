@@ -10,6 +10,11 @@ return [
     | This option controls the default authentication "guard" and password
     | reset options for your application. You may change these defaults
     | as required, but they're a perfect start for most applications.
+    Improtant information 
+    web guard == Admin
+    student guard == Student
+    parent guard == Parent
+    teacher guard == Teacher
     |
     */
 
@@ -39,8 +44,17 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
+        ],    // this mean is Admin
+        'student' => [
+            'driver' => 'session',
+            'provider' => 'students',
+        ], 'parent' => [
+            'driver' => 'session',
+            'provider' => 'parents',
+        ], 'teacher' => [
+            'driver' => 'session',
+            'provider' => 'teachers',
         ],
-
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -69,6 +83,18 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+        'students' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Student::class,
+        ],
+        'parents' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\MyParent::class,
+        ],
+        'teachers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Teacher::class,
         ],
 
         // 'users' => [

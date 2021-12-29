@@ -8,7 +8,7 @@
     <meta name="description" content="Webmin - Bootstrap 4 & Angular 5 Admin Dashboard Template" />
     <meta name="author" content="potenzaglobalsolutions.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>مدرسة الفلاح الاعدادية</title>
+    <title>{{trans('home.name')}}</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" />
@@ -43,32 +43,38 @@
             style="background-image: url({{ URL::asset('assets/images/login-bg.jpg') }});">
             <div class="container">
                 <div class="row justify-content-center no-gutters vertical-align">
-                    <div class="col-lg-4 col-md-6 login-fancy-bg bg"
+                    @if (App::getLocale() == 'en')
+                    <div class="col-lg-4 col-md-6  bg text-left"
                         style="background-image: url({{ URL::asset('assets/images/purple.png') }});">
-                        <div class="login-fancy">
-                            <h3 class="text-white mb-20">مجموعة السلام التدريبية </h3>
-                            <p class="mb-20 text-white text-sm">في عام 2000 ، قامت مجموعة من الأكاديميين الطموحين بتأسيس مجموعة مراكز السلام للتدريب لتلبية احتياجات السوق المحلي. ATG هو
-                                مؤسسة التدريب الفلسطينية المستقلة. بدأت ATG عملها بتقديم
-                                دورات تدريبية لممارسة اللغة الإنجليزية وإتقانها. سنوات قليلة
-                                فيما بعد ، وسعت عملها لتلتحق
-                                التخصصات الأخرى التي تخدم السوق المحلي مثل المحاسبة ،
-                                التفكير الإبداعي والإدارة والسكرتير . </p>
-                            <ul class="list-unstyled">
-                                <li class="list-inline-item"><a class="" style="color: yellow" href="{{ route('register') }}"> للتسجيل اضغط هنا</a> </li>
+                        <div class="login-fancy text-left">
+                    
+                           <h3 class="float-left text-white " style="float: left">{{trans('home.fullname')}} </h3><p class="mb-20 text-white text-sm"> {{trans('home.info')}}</p>
+                           <ul class="list-unstyled">
+                          
+                           
+                          
+                                <br>  <br>  <br>  <br>  <br> 
+                                <p class="font-weight-bold text-capitalize text-lg-center"> You are {{$type}}</p>
 
+                              <!--  <li class="list-inline-item"><a class="" style="color: yellow" href=""> للتسجيل اضغط هنا</a> </li>
+                              --> 
                             </ul>
 
                         </div>
                     </div>
+                    @else
+                    @endif
                     <div class="col-lg-4 col-md-6 bg-white">
                         <div class="login-fancy pb-40 clearfix">
-                            <h3 class="mb-30">تسجيل الدخول</h3>
+                            <h3 class="mb-30">{{trans('home.log')}}</h3>
 
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
 
                                 <div class="section-field mb-20">
-                                    <label class="mb-10" for="name">البريدالالكتروني*</label>
+                                    <label class="mb-10" for="name">{{trans('home.email')}}*</label>
+                                    <input type="hidden" value="{{$type}}" name="type">
+
                                     <input id="email" type="email"
                                         class="form-control @error('email') is-invalid @enderror" name="email"
                                         value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -81,7 +87,7 @@
                                 </div>
 
                                 <div class="section-field mb-20">
-                                    <label class="mb-10" for="Password">كلمة المرور * </label>
+                                    <label class="mb-10" for="Password">{{trans('home.passowrd')}} * </label>
                                     <input id="password" type="password"
                                         class="form-control @error('password') is-invalid @enderror" name="password"
                                         required autocomplete="current-password">
@@ -96,11 +102,11 @@
                                 <div class="section-field">
                                     <div class="remember-checkbox mb-30">
                                         <input type="checkbox" class="form-control" name="two" id="two" />
-                                        <label for="two"> تذكرني</label>
-                                        <a href="#" class="float-right">هل نسيت كلمةالمرور ؟</a>
+                                        <label for="two"> {{trans('home.remmeberme')}}</label>
+                                        <a href="#" class="float-right">{{trans('home.forgotpassowrd')}}</a>
                                     </div>
                                 </div>
-                                <button class="button"><span>دخول</span><i class="fa fa-check"></i></button>
+                                <button class="button"><span>{{trans('home.login')}}</span><i class="fa fa-check"></i></button>
                             </form>
                         </div>
                     </div>
