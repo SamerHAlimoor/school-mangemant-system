@@ -34,7 +34,8 @@
                                             <th>{{trans('Teacher_trans.Gender')}}</th>
                                             <th>{{trans('Teacher_trans.Joining_Date')}}</th>
                                             <th>{{trans('Teacher_trans.specialization')}}</th>
-                                            <th>العمليات</th>
+                                            
+                                            <th>{{trans('Teacher_trans.operations')}}</th>
                                         </tr>
                                         </thead>
                                         <tbody>

@@ -2,14 +2,12 @@
 @section('css')
     @toastr_css
 @section('title')
-    قائمة الحضور والغياب للطلاب
-@stop
+{{ trans('main_trans.Attendance_absence_section') }}@stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    قائمة الحضور والغياب للطلاب
-@stop
+{{ trans('main_trans.Attendance_absence_section') }}@stop
 <!-- breadcrumb -->
 @endsection
 @section('content')
@@ -35,11 +33,11 @@
 
 <div class="row">
     <div class="col-sm-6 text-left">
-        <h5 style="font-family: 'Cairo', sans-serif;color: red" class="text-left">  اليوم : {{ $nameofDay }}</h5>
+        <h5 style="font-family: 'Cairo', sans-serif;color: red" class="text-left">  {{ trans('main_trans.today') }} : {{ $nameofDay }}</h5>
 
     </div>
     <div class="col-sm-6 text-right">
-        <h5 style="font-family: 'Cairo', sans-serif;color: rgb(37, 151, 33)"> تاريخ اليوم : {{ date('l j F Y') }}</h5>
+        <h5 style="font-family: 'Cairo', sans-serif;color: rgb(37, 151, 33)"> {{ trans('main_trans.date') }} : {{ date('l j F Y') }}</h5>
 
     </div>
     
@@ -81,14 +79,14 @@
                                 <input name="attendences[{{ $student->id }}]" disabled
                                        {{ $student->attendance()->first()->attendence_status == 1 ? 'checked' : '' }}
                                        class="leading-tight" type="radio" value="presence">
-                                <span class="text-success">حضور</span>
+                                <span class="text-success">{{ trans('main_trans.Attendanc') }} </span>
                             </label>
 
                             <label class="ml-4 block text-gray-500 font-semibold">
                                 <input name="attendences[{{ $student->id }}]" disabled
                                        {{ $student->attendance()->first()->attendence_status == 0 ? 'checked' : '' }}
                                        class="leading-tight" type="radio" value="absent">
-                                <span class="text-danger">غياب</span>
+                                <span class="text-danger">{{ trans('main_trans.Absence') }} </span>
                             </label>
 
                         @else
@@ -96,13 +94,13 @@
                             <label class="block text-gray-500 font-semibold sm:border-r sm:pr-4">
                                 <input name="attendences[{{ $student->id }}]" class="leading-tight" type="radio"
                                        value="presence">
-                                <span class="text-success">حضور</span>
+                                <span class="text-success">{{ trans('main_trans.Attendanc') }} </span>
                             </label>
 
                             <label class="ml-4 block text-gray-500 font-semibold">
                                 <input name="attendences[{{ $student->id }}]" class="leading-tight" type="radio"
                                        value="absent">
-                                <span class="text-danger">غياب</span>
+                                <span class="text-danger">{{ trans('main_trans.absence') }} </span>
                             </label>
 
                         @endif

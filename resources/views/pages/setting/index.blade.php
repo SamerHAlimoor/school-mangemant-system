@@ -2,13 +2,12 @@
 @section('css')
     @toastr_css
 @section('title')
-    الاعدادات
-@stop
+{{trans('settings.settings')}}@stop
 @endsection
 @section('page-header')
 <!-- breadcrumb -->
 @section('PageTitle')
-    الاعدادات
+  {{trans('settings.settings')}}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -35,13 +34,13 @@
                     <div class="row">
                         <div class="col-md-9 border-right-2 border-right-blue-400">
                             <div class="form-group row">
-                                <label class="col-lg-2 col-form-label font-weight-semibold">اسم المؤسسة<span class="text-danger">*</span></label>
+                                <label class="col-lg-2 col-form-label font-weight-semibold">  {{trans('settings.name')}}<span class="text-danger">*</span></label>
                                 <div class="col-lg-9">
                                     <input name="school_name" value="{{ $setting['school_name'] }}" required type="text" class="form-control" placeholder="Name of School">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="current_session" class="col-lg-2 col-form-label font-weight-semibold">العام الحالي<span class="text-danger">*</span></label>
+                                <label for="current_session" class="col-lg-2 col-form-label font-weight-semibold">  {{trans('settings.currentyear')}}<span class="text-danger">*</span></label>
                                 <div class="col-lg-9">
                                     <select data-placeholder="Choose..." required name="current_session" id="current_session" class="form-control form-control-lg select-search ">
                                         <option value=""></option>
@@ -52,44 +51,44 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-lg-2 col-form-label font-weight-semibold">اسم المؤسسة المختصر</label>
+                                <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('settings.abbreviatedName')}}</label>
                                 <div class="col-lg-9">
                                     <input name="school_title" value="{{ $setting['school_title'] }}" type="text" class="form-control" placeholder="School Acronym">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-lg-2 col-form-label font-weight-semibold">الهاتف</label>
+                                <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('settings.phone')}}</label>
                                 <div class="col-lg-9">
                                     <input name="phone" value="{{ $setting['phone'] }}" type="text" class="form-control" placeholder="Phone">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-lg-2 col-form-label font-weight-semibold">البريد الالكتروني</label>
+                                <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('settings.email')}}</label>
                                 <div class="col-lg-9">
                                     <input name="school_email" value="{{ $setting['school_email'] }}" type="email" class="form-control" placeholder="School Email">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-lg-2 col-form-label font-weight-semibold">عنوان المؤسسة<span class="text-danger">*</span></label>
+                                <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('settings.address')}}<span class="text-danger">*</span></label>
                                 <div class="col-lg-9">
                                     <input required name="address" value="{{ $setting['address'] }}" type="text" class="form-control" placeholder="School Address">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-lg-2 col-form-label font-weight-semibold">نهاية الترم الاول </label>
+                                <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('settings.start_of_term')}} </label>
                                 <div class="col-lg-9">
                                     <input name="end_first_term" value="{{ $setting['end_first_term'] }}" type="text" class="form-control date-pick" placeholder="Date Term Ends">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-lg-2 col-form-label font-weight-semibold">نهاية الترم الثاني</label>
+                                <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('settings.end_of_term')}} </label>
                                 <div class="col-lg-9">
                                     <input name="end_second_term" value="{{ $setting['end_second_term'] }}" type="text" class="form-control date-pick" placeholder="Date Term Ends">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-lg-2 col-form-label font-weight-semibold">شعار المؤسسة</label>
+                                <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('settings.logo')}}</label>
                                 <div class="col-lg-9">
                                     <div class="mb-3">
                                         <img style="width: 100px" height="100px" src="{{ URL::asset('attachments/logo/'.$setting['logo']) }}" alt="">

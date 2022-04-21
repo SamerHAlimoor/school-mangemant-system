@@ -34,7 +34,7 @@ class LibraryRepository implements LibraryRepositoryInterface
             $books->section_id = $request->section_id;
             $books->teacher_id = 1;
             $books->save();
-            $this->uploadFile($request,'file_name');
+            $this->uploadFile($request,'file_name','Books');
 
             toastr()->success(trans('messages.success'));
             return redirect()->route('library.create');
@@ -89,6 +89,6 @@ class LibraryRepository implements LibraryRepositoryInterface
 
     public function download($filename)
     {
-        return response()->download(public_path('attachments/library/'.$filename));
+        return response()->download(public_path('attachments/books/'.$filename));
     }
 }

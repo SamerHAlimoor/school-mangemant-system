@@ -50,8 +50,15 @@ return [
     'undo_all' => 'تراجع عن الكل',
     'is_gardauation' => 'هل تريد تخريج الطالب ',
 
+    'gardauation' => ' تخريج الطالب ',
     
-    
+    'deails' => ' عرض التفاصيل ',
+    'edit_student' => ' تعديل المعلومات ',
+    'add_invoices' => ' إضافة فاتورة للطالب ',
+    'recipt' => ' سند قبض ',
+    'exclude_fee' => ' إستبعاد رسوم ',
+    'receipt' => ' سند صرف ',
+    'delete_student' => ' حذف الطالب ',
 
 
 

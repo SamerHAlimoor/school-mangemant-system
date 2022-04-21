@@ -9,6 +9,7 @@ class Quizze extends Model
 {
     use HasTranslations;
     public $translatable = ['name'];
+    
 
     public function teacher()
     {

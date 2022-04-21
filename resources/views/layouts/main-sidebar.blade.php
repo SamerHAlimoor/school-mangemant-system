@@ -146,7 +146,7 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Attendance-icon" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="{{route('Attendance.index')}}">قائمة حضور الطلاب</a> </li>
+                            <li> <a href="{{route('Attendance.index')}}">{{trans('main_trans.Student_attendance_list')}}</a> </li>
                         </ul>
                     </li>
                     <!-- Subjects-->
@@ -169,8 +169,8 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Exams-icon" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="{{route('Quizzes.index')}}">قائمة الاختبارات</a> </li>
-                            <li> <a href="{{route('questions.index')}}">قائمة الاسئلة</a> </li>
+                            <li> <a href="{{route('Quizzes.index')}}">{{trans('main_trans.list_exams')}} </a> </li>
+                            <li> <a href="{{route('questions.index')}}">{{trans('main_trans.list_questios')}}</a> </li>
                         </ul>
                     </li>
 
@@ -182,7 +182,7 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="library-icon" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="{{route('library.index')}}">قائمة الكتب</a> </li>
+                            <li> <a href="{{route('library.index')}}">{{trans('main_trans.list_books')}}</a> </li>
 
                         </ul>
                     </li>
@@ -196,8 +196,8 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Onlineclasses-icon" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="{{route('online_classes.index')}}">الاتصال مباشر مع زوم</a> </li>
-                            <li> <a href="themify-icons.html">الاتصال الغير مباشر مع زوم</a> </li>
+                            <li> <a href="{{route('online_classes.index')}}">{{trans('main_trans.connect_d')}}</a> </li>
+                            <li> <a href="themify-icons.html">{{trans('main_trans.connect_nd')}}</a> </li>
                         </ul>
                     </li>
 

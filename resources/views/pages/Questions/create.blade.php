@@ -2,14 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-    اضافة سؤال جديد
+{{trans('quizzes.add_q')}}
 @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    اضافة سؤال جديد
-@stop
+{{trans('quizzes.add_q')}}@stop
 <!-- breadcrumb -->
 @endsection
 @section('content')
@@ -35,7 +34,7 @@
                                 <div class="form-row">
 
                                     <div class="col">
-                                        <label for="title">اسم السؤال</label>
+                                        <label for="title">{{trans('quizzes.q')}}</label>
                                         <input type="text" name="title" id="input-name"
                                                class="form-control form-control-alternative" autofocus>
                                     </div>
@@ -44,7 +43,7 @@
 
                                 <div class="form-row">
                                     <div class="col">
-                                        <label for="title">الاجابات</label>
+                                        <label for="title">{{trans('quizzes.answers')}}</label>
                                         <textarea name="answers" class="form-control" id="exampleFormControlTextarea1"
                                                   rows="4"></textarea>
                                     </div>
@@ -53,7 +52,7 @@
 
                                 <div class="form-row">
                                     <div class="col">
-                                        <label for="title">الاجابة الصحيحة</label>
+                                        <label for="title">{{trans('quizzes.correct_answer')}}</label>
                                         <input type="text" name="right_answer" id="input-name"
                                                class="form-control form-control-alternative" autofocus>
                                     </div>
@@ -63,10 +62,10 @@
                                 <div class="form-row">
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <label for="Grade_id">اسم الاختبار : <span
+                                            <label for="Grade_id">{{trans('quizzes.nameofexam')}} : <span
                                                     class="text-danger">*</span></label>
                                             <select class="custom-select mr-sm-2" name="quizze_id">
-                                                <option selected disabled>حدد اسم الاختبار...</option>
+                                                <option selected disabled>{{trans('quizzes.nameofexam')}} ...</option>
                                                 @foreach($quizzes as $quizze)
                                                     <option value="{{ $quizze->id }}">{{ $quizze->name }}</option>
                                                 @endforeach
@@ -75,9 +74,9 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <label for="Grade_id">الدرجة : <span class="text-danger">*</span></label>
+                                            <label for="Grade_id">{{trans('quizzes.grade')}} : <span class="text-danger">*</span></label>
                                             <select class="custom-select mr-sm-2" name="score">
-                                                <option selected disabled> حدد الدرجة...</option>
+                                                <option selected disabled>{{trans('quizzes.grade')}}..</option>
                                                 <option value="5">5</option>
                                                 <option value="10">10</option>
                                                 <option value="15">15</option>
@@ -87,7 +86,7 @@
                                     </div>
                                 </div>
                                 <br>
-                                <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" type="submit">حفظ البيانات</button>
+                                <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" type="submit">{{trans('quizzes.save')}}</button>
                             </form>
                         </div>
                     </div>

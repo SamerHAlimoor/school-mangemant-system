@@ -2,14 +2,12 @@
 @section('css')
     @toastr_css
 @section('title')
-    {{ trans('Sections_trans.title_page') }}: الحضور والغياب
-@stop
+{{ trans('main_trans.Attendance_absence_section') }}@stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    {{ trans('Sections_trans.title_page') }}: الحضور والغياب
-@stop
+{{ trans('main_trans.Attendance_absence_section') }}@stop
 <!-- breadcrumb -->
 @endsection
 @section('content')

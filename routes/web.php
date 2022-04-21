@@ -13,13 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath', 'guest']], function () {
-    Auth::routes();
-    Route::get('/', function () {
-        return view('auth.login');
+Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function () {
+  //  Auth::routes();
+   
+    Route::get('/', 'HomeController@home')->name('home');
+
+    Route::group(['namespace' => 'Auth'], function () {
+
+        Route::get('/login/{type}','LoginController@formLogin')->middleware('guest')->name('login.show');
+        
+        Route::post('/login','LoginController@login')->name('login');
+        Route::get('/logout/{type}', 'LoginController@logout')->name('logout');
+        
+
     });
+    
 
 });
+
 
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath', 'auth']], function () {
     /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
@@ -62,7 +73,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
     //==============================[parent]============================
 
-    Route::view('addParent', 'livewire.show_Form');
+    Route::view('addParent', 'livewire.show_Form')->name('add_parent');
 
 
       //==============================Students============================
@@ -100,9 +111,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     Route::group(['namespace' => 'Subjects'], function () {
         Route::resource('subjects', 'SubjectController');
     });
-    Route::group(['namespace' => 'Exams'], function () {
+  /*  Route::group(['namespace' => 'Exams'], function () {
         Route::resource('Exams', 'ExamController');
-    });
+    });*/
     Route::group(['namespace' => 'Quizzes'], function () {
         Route::resource('Quizzes', 'QuizzController');
     });

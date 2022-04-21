@@ -2,13 +2,12 @@
 @section('css')
     @toastr_css
 @section('title')
-    اضافة فاتورة جديدة
-@stop
+{{ trans('Fees_trans.add_new_invoices') }}@stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-اضافة فاتورة جديدة {{$student->name}}
+{{ trans('Fees_trans.add_new_invoices')}}  --> {{$student->name}}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -38,17 +37,17 @@
                                             <div class="row">
 
                                                 <div class="col">
-                                                    <label for="Name" class="mr-sm-2">اسم الطالب</label>
+                                                    <label for="Name" class="mr-sm-2">{{ trans('Fees_trans.name') }}</label>
                                                     <select class="fancyselect" name="student_id" required>
                                                             <option value="{{ $student->id }}">{{ $student->name }}</option>
                                                     </select>
                                                 </div>
 
                                                 <div class="col">
-                                                    <label for="Name_en" class="mr-sm-2">نوع الرسوم</label>
+                                                    <label for="Name_en" class="mr-sm-2">{{ trans('Fees_trans.fee_type') }}</label>
                                                     <div class="box">
                                                         <select class="fancyselect" name="fee_id" required>
-                                                            <option value="">-- اختار من القائمة --</option>
+                                                            <option value="">{{ trans('Fees_trans.fee_type') }}</option>
                                                             @foreach($fees as $fee)
                                                                 <option value="{{ $fee->id }}">{{ $fee->title }}</option>
                                                             @endforeach
@@ -58,10 +57,10 @@
                                                 </div>
 
                                                 <div class="col">
-                                                    <label for="Name_en" class="mr-sm-2">المبلغ</label>
+                                                    <label for="Name_en" class="mr-sm-2">{{ trans('Fees_trans.ammount') }}</label>
                                                     <div class="box">
                                                         <select class="fancyselect" name="amount" required>
-                                                            <option value="">-- اختار من القائمة --</option>
+                                                            <option value="">{{ trans('Fees_trans.ammount') }}</option>
                                                             @foreach($fees as $fee)
                                                                 <option value="{{ $fee->amount }}">{{ $fee->amount }}</option>
                                                             @endforeach
@@ -70,7 +69,7 @@
                                                 </div>
 
                                                 <div class="col">
-                                                    <label for="description" class="mr-sm-2">البيان</label>
+                                                    <label for="description" class="mr-sm-2">{{ trans('Fees_trans.details') }}</label>
                                                     <div class="box">
                                                         <input type="text" class="form-control" name="description" required>
                                                     </div>
@@ -91,7 +90,7 @@
                                     <input type="hidden" name="Grade_id" value="{{$student->grade_id}}">
                                     <input type="hidden" name="Classroom_id" value="{{$student->classroom_id}}">
 
-                                    <button type="submit" class="btn btn-primary">تاكيد البيانات</button>
+                                    <button type="submit" class="btn btn-primary">{{ trans('Fees_trans.save') }}</button>
                                 </div>
                             </div>
                         </form>

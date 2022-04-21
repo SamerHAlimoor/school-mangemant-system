@@ -42,7 +42,59 @@ return [
     'List_subjects'=>'قائمة المواد',
     'list_exams'=>'قائمة الامتحانات',
 
+
+    'number_of_students'=>'عدد الطلاب',
+'Display_data'=>'عرض البيانات',
+'number_of_teachers'=>'عدد المعلمين',
+'number_of_classes'=>'عدد الصفوف الدراسية',
+'number_of_parents'=>'عدد اولياء الامور',
+'last_operations_on_the_system'=>'اخر العمليات على النظام',
+  'the_students'=>'الطلاب',
+'teachers'=>'المعلمين',
+'Parents'=>'أولياء الامور',
+'Invoices'=>'الفواتير',
+'students_name'=>'اسم الطالب',
+'email'=>'الايميل',
+'Type'=>'الجنس',
+'Educational_level'=>'مستوي الدراسة',
+'Classroom'=>'الصف  الدراسي',
+'Section'=>'القسم',
+'Added_date'=>'تاريخ الاضافة',
+'no_data'=>'لاتوجد بيانات',
     
+
+'name'=>'الاسم',
+    
+'Date_of_hiring'=>'تاريخ التعييم',
+'Specialization'=>'التخصص',
+'ID_Number'=>'رقم الهوية',
+'phone_number'=>'رقم الجوال',
+'Invoice_date'=>'تاريخ الفاتورة',
+'Fee_type'=>'نوع الرسوم',
+'the_amount'=>'المبلغ',
+
+
+'Attendance_absence_section'=>' قسم الحضور والغياب',
+    'Student_attendance_list'=>'قائمة حضور الطلاب',
+    'list_questios'=>'قائمة الاسئلة',
+    'list_books'=>'قائمة الكتب',
+
+    'connect_d'=>'الاتصال المباشر مع الزوم',
+    'connect_nd'=>'الاتصال الغير المباشر مع الزوم',
+
+
+    'absence'=>'غياب',
+
+    'today'=>'اليوم',
+    'date'=>'تاريخ اليوم',
+    'Attendanc'=>'حضور',
+
+
+    'Absence '=>'غياب',
+
+
+
+
 
 
 ];

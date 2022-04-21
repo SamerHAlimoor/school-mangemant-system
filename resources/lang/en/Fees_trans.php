@@ -10,17 +10,36 @@ return [
     'classroom'=>'Classroom',
     'academic_year'=>'Academic Year',
     'notes'=>'Notes',
-    'processes'=>'Processes',
+    
 
-    'uniform_fee'=>'School Uniform Fees',
-    'the_study_fees'=>' The Study Fees',
-    'study_fees'=>' The School Bus Fees',
+    'uniform_fee'=>'Institution Uniform Fees',
+    'the_study_fees'=>' Institution Fees',
+    'study_fees'=>'Institution Fees',
     
     'invoices'=>'Invoices',
     'receipt'=>'Receipt',
     'Fee_exclusion'=>' Fee exclusion',
     'Bills_of_exchange'=>'Bills of exchange',
-   
-   
 
+
+
+    'fee_invoices'=>'Fee Invoices',
+    'fee_type'=>'Fee Type',
+    'ammount'=>'Amount',
+    'classroom'=>'Classroom',
+    'stage'=>'Stage',
+    'details'=>'Details',
+    'bus_fees'=>'Bus Fees',
+
+    
+    'processes'=>'Processes',
+   
+    'name_ar'=>'Arabic Name',
+    'name_en'=>'English Name',
+    'add_new_invoices'=>'Add New Invoices',
+    'save'=>'Save',
+    'student_credit'=>' Student credit',
+
+
+    'Tuition_Fee_Processors'=>'Tuition Fee Processors',
 ];
