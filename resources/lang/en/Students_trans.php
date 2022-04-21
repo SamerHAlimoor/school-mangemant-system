@@ -51,5 +51,13 @@ return [
     'undo_all' => 'Undo All',
     'is_gardauation' => 'Do you want to Graduate this Student? ',
     
-
+    'gardauation' => 'Student Graduation ',
+    
+    'deails' => ' Details ',
+    'edit_student' => ' Edit Student ',
+    'add_invoices' => 'Add Invoices ',
+    'recipt' => 'Catch Receipt ',
+    'exclude_fee' => 'Exclude Fee',
+    'receipt' => 'Receipt',
+    'delete_student' => 'Delete Student ',
 ]; 

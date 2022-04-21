@@ -12,7 +12,7 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" />
-
+    @toastr_css
     <!-- Font -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Poppins:200,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900">
@@ -44,13 +44,15 @@
             <div class="container">
                 <div class="row justify-content-center no-gutters vertical-align">
                     @if (App::getLocale() == 'en')
-                    <div class="col-lg-4 col-md-6  bg text-left"
+                    <div class="col-lg-4 col-md-6  bg "
                         style="background-image: url({{ URL::asset('assets/images/purple.png') }});">
-                        <div class="login-fancy text-left">
+                        <div class="login-fancy ">
                     
-                           <h3 class="float-left text-white " style="float: left">{{trans('home.fullname')}} </h3><p class="mb-20 text-white text-sm"> {{trans('home.info')}}</p>
-                           <ul class="list-unstyled">
-                          
+                           <h3 class="float-left text-white " style="float: left">{{trans('home.fullname')}} </h3><br>
+                           
+                           <ul class="list-unstyled text-left ">
+                            <br>  <br>  
+                            <p class="mb-20 text-white text-sm text-left "> {{trans('home.info')}}</p>
                            
                           
                                 <br>  <br>  <br>  <br>  <br> 
@@ -116,7 +118,9 @@
 
         <!--=================================
  login-->
-
+ @jquery
+    @toastr_js
+    @toastr_render
     </div>
     <!-- jquery -->
     <script src="{{ URL::asset('assets/js/jquery-3.3.1.min.js') }}"></script>

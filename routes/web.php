@@ -73,7 +73,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
     //==============================[parent]============================
 
-    Route::view('addParent', 'livewire.show_Form');
+    Route::view('addParent', 'livewire.show_Form')->name('add_parent');
 
 
       //==============================Students============================

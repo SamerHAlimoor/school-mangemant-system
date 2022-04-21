@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-    حصص اونلاين
+{{trans('zoom.OnlineClass')}}
 @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    حصص اونلاين
+{{trans('zoom.OnlineClass')}}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -22,7 +22,8 @@
                         <div class="card card-statistics h-100">
                             <div class="card-body">
                                 <a href="{{route('online_classes.create')}}" class="btn btn-success btn-sm" role="button"
-                                   aria-pressed="true">اضافة حصة جديدة</a><br><br>
+                                   aria-pressed="true">{{trans('zoom.addOnlineClass')}}
+                                </a><br><br>
                                 <div class="table-responsive">
                                     <table id="datatable" class="table  table-hover table-sm table-bordered p-0"
                                            data-page-length="50"
@@ -30,15 +31,15 @@
                                         <thead>
                                         <tr class="alert-success">
                                             <th>#</th>
-                                            <th>المرحلة</th>
-                                            <th>الصف</th>
-                                            <th>القسم</th>
-                                            <th>المعلم</th>
-                                            <th>عنوان الحصة</th>
-                                            <th>تاريخ البداية</th>
-                                            <th>وقت الحصة</th>
-                                            <th>رابط الحصة</th>
-                                            <th>العمليات</th>
+                                            <th>{{trans('zoom.stage')}}</th>
+                                            <th>{{trans('zoom.class')}}</th>
+                                            <th>{{trans('zoom.sections')}}</th>
+                                            <th>{{trans('zoom.teacher_name')}}</th>
+                                            <th>{{trans('zoom.headOfClass')}}</th>
+                                            <th>{{trans('zoom.start')}}</th>
+                                            <th>{{trans('zoom.time')}}</th>
+                                            <th>{{trans('zoom.Link')}}</th>
+                                            <th>{{trans('zoom.Operations')}}</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -52,7 +53,7 @@
                                                 <td>{{$online_classe->topic}}</td>
                                                 <td>{{$online_classe->start_at}}</td>
                                                 <td>{{$online_classe->duration}}</td>
-                                                <td class="text-danger"><a href="{{$online_classe->join_url}}" target="_blank">انضم الان</a></td>
+                                                <td class="text-danger"><a href="{{$online_classe->join_url}}" target="_blank">{{trans('zoom.join')}}</a></td>
                                                 <td>
                                                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#Delete_receipt{{$online_classe->meeting_id}}" ><i class="fa fa-trash"></i></button>
                                                 </td>

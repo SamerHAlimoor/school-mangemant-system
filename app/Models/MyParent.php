@@ -4,8 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
-
-class MyParent extends Model
+use Illuminate\Foundation\Auth\User as Authenticatable;
+class MyParent extends Authenticatable
 {
     //
     use HasTranslations;

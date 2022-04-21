@@ -14,5 +14,6 @@ return [
     'Gender'=>'النوع',
     'Joining_Date'=>'تاريخ التعين',
     'Address'=>'العنوان',
+    'operations'=>'العمليات',
 
 ];

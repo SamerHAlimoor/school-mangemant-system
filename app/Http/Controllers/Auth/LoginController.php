@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Traits\AuthTrait;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Yoeunes\Toastr\Facades\Toastr;
 
 class LoginController extends Controller
 {
@@ -29,9 +30,14 @@ class LoginController extends Controller
     public function login(Request $request){
 
 
-        //return $request;
+       //return $request;
         if (Auth::guard($this->checkGuard($request))->attempt(['email' => $request->email, 'password' => $request->password])) {
-           return $this->redirect($request);
+      // return "True";
+      Toastr::success('Login successfully :)','Success');
+            return $this->redirect($request);
+        }else {
+            Toastr::error('fail, WRONG USERNAME OR PASSWORD :)','Error');
+            return redirect('/');
         }
 
     }

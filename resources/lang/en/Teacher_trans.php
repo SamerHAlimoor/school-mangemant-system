@@ -8,11 +8,11 @@ return [
     'Delete_Teacher'=>'Delete Teacher',
     'Email'=>'Email',
     'Password'=>'Password',
-    'Name_ar'=>'Name_ar',
-    'Name_en'=>'Name_en',
-    'specialization'=>'specialization',
+    'Name_ar'=>'Name in Arabic ',
+    'Name_en'=>'Name in English',
+    'specialization'=>'Specialization',
     'Gender'=>'Gender',
-    'Joining_Date'=>'Joining_Date',
+    'Joining_Date'=>'Joining Date',
     'Address'=>'Address',
-
+    'operations'=>'Operations',
 ];

@@ -2,14 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-    اضافة كتاب جديد
+{{trans('library.add_new_book')}}
 @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    اضافة كتاب جديد
-@stop
+{{trans('library.add_new_book')}}@stop
 <!-- breadcrumb -->
 @endsection
 @section('content')

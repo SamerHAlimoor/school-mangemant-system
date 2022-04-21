@@ -22,9 +22,9 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/dashboard';   //this is url not name of route 
-    public const STUDENT = '/dashboard';
-    public const TEACHER = '/dashboard';
-    public const PARENTS = '/dashboard';
+    public const STUDENT = '/dashboard/student';
+    public const TEACHER = '/dashboard/teacher';
+    public const PARENTS = '/dashboard/parents';
     /**
      * Define your route model bindings, pattern filters, etc.
      *
@@ -60,9 +60,24 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
+        // this  web  for admin
         Route::middleware('web')
             ->namespace($this->namespace)
             ->group(base_path('routes/web.php'));
+
+            Route::middleware('web')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/student.php'));
+
+            Route::middleware('web')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/teacher.php'));
+
+            Route::middleware('web')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/parent.php'));
+
+            
     }
 
     /**

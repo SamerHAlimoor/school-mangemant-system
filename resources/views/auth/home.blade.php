@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title> {{trans('home.name')}}</title>
     <link rel="shortcut icon" href="{{ URL::asset('assets/images/favicon.png') }}" type="image/x-icon" />
+    @toastr_css
 
     <!-- Favicon -->
 
@@ -76,7 +77,9 @@
     @yield('js')
     <!-- custom -->
     <script src="{{ URL::asset('assets/js/custom.js') }}"></script>
-
+    @jquery
+    @toastr_js
+    @toastr_render
 </body>
 
 </html>

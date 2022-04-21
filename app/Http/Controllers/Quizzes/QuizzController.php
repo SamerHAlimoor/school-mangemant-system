@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Quizzes;
 
 use App\Http\Controllers\Controller;
+use App\Models\Quizze;
 use App\Repository\QuizzRepositoryInterface;
 use Illuminate\Http\Request;
 
@@ -18,6 +19,7 @@ class QuizzController extends Controller
 
     public function index()
     {
+    
         return $this->Quizz->index();
     }
 

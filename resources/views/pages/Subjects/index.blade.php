@@ -2,14 +2,12 @@
 @section('css')
     @toastr_css
 @section('title')
-    قائمة المواد الدراسية
-@stop
+{{ trans('Subject.subject') }}@stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    قائمة المواد الدراسية
-@stop
+{{ trans('Subject.subject') }}@stop
 <!-- breadcrumb -->
 @endsection
 @section('content')
@@ -22,7 +20,7 @@
                         <div class="card card-statistics h-100">
                             <div class="card-body">
                                 <a href="{{route('subjects.create')}}" class="btn btn-success btn-sm" role="button"
-                                   aria-pressed="true">اضافة مادة جديدة</a><br><br>
+                                   aria-pressed="true">{{ trans('Subject.add_subject') }}</a><br><br>
                                 <div class="table-responsive">
                                     <table id="datatable" class="table  table-hover table-sm table-bordered p-0"
                                            data-page-length="50"
@@ -30,11 +28,11 @@
                                         <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>اسم المادة</th>
-                                            <th>المرحلة الدراسية</th>
-                                            <th>الصف الدراسي</th>
-                                            <th>اسم المعلم</th>
-                                            <th>العمليات</th>
+                                            <th>{{ trans('Subject.name') }}</th>
+                                            <th>{{ trans('Subject.stage') }}</th>
+                                            <th>{{ trans('Subject.class') }}</th>
+                                            <th>{{ trans('Subject.teacher_name') }}</th>
+                                            <th>{{ trans('Subject.operation') }}</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -44,7 +42,7 @@
                                             <td>{{$subject->name}}</td>
                                             <td>{{$subject->grade->name}}</td>
                                             <td>{{$subject->classroom->name_class}}</td>
-                                            <td>{{$subject->teacher->name}}</td>
+                                            <td>{{$subject->teacher_id}}</td>
                                                 <td>
                                                     <a href="{{route('subjects.edit',$subject->id)}}" class="btn btn-info btn-sm" role="button" aria-pressed="true"><i class="fa fa-edit"></i></a>
                                                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete_subject{{ $subject->id }}" title="حذف"><i class="fa fa-trash"></i></button>

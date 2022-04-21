@@ -8,8 +8,7 @@
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    قائمة الاختبارات
-@stop
+{{trans('quizzes.list_quizzes')}}@stop
 <!-- breadcrumb -->
 @endsection
 @section('content')
@@ -22,7 +21,7 @@
                         <div class="card card-statistics h-100">
                             <div class="card-body">
                                 <a href="{{route('Quizzes.create')}}" class="btn btn-success btn-sm" role="button"
-                                   aria-pressed="true">اضافة اختبار جديد</a><br><br>
+                                   aria-pressed="true">  {{trans('quizzes.list_quizzes')}}</a><br><br>
                                 <div class="table-responsive">
                                     <table id="datatable" class="table  table-hover table-sm table-bordered p-0"
                                            data-page-length="50"
@@ -30,12 +29,12 @@
                                         <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>اسم الاختبار</th>
-                                            <th>اسم المعلم</th>
-                                            <th>المرحلة الدراسية</th>
-                                            <th>الصف الدراسي</th>
-                                            <th>القسم</th>
-                                            <th>العمليات</th>
+                                            <th>{{trans('quizzes.nameofexam')}}</th>
+                                            <th>{{trans('quizzes.nameofteacher')}}</th>
+                                            <th>{{trans('quizzes.grade')}}</th>
+                                            <th>{{trans('quizzes.classroom')}}</th>
+                                            <th>{{trans('quizzes.section')}}</th>
+                                            <th>{{trans('quizzes.processes')}}</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -43,6 +42,7 @@
                                             <tr>
                                                 <td>{{ $loop->iteration}}</td>
                                                 <td>{{$quizze->name}}</td>
+                                                
                                                 <td>{{$quizze->teacher->name}}</td>
                                                 <td>{{$quizze->grade->name}}</td>
                                                 <td>{{$quizze->classroom->name_class}}</td>
