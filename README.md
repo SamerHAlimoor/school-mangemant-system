@@ -39,7 +39,18 @@
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-onlineclass3.PNG" width="100%" alt="Login Page"></a>
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-onlineclass3.PNG" width="100%" alt="Login Page"></a>
 
-    <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-parent-livewire.PNG" width="100%" alt="Login Page"></a>
+  <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/sections.PNG" width="100%" alt="Login Page"></a>
+    <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/sections1.PNG" width="100%" alt="Login Page"></a>
+      <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/setting.PNG" width="100%" alt="Login Page"></a>
+    <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/sidebar1.PNG" width="100%" alt="Login Page"></a>
+      <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/subjectlist.PNG" width="100%" alt="Login Page"></a>
+    <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/teachers.PNG" width="100%" alt="Login Page"></a>
+
+
+
+
+</p>
+ <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-parent-livewire.PNG" width="100%" alt="Login Page"></a>
     
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-teacher.PNG" width="100%" alt="Login Page"></a>
     
@@ -63,17 +74,6 @@
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/onlineclass2.PNG" width="100%" alt="Login Page"></a>
       <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/profile1.PNG" width="100%" alt="Login Page"></a>
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/profile2.PNG" width="100%" alt="Login Page"></a>
-  <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/sections.PNG" width="100%" alt="Login Page"></a>
-    <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/sections1.PNG" width="100%" alt="Login Page"></a>
-      <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/setting.PNG" width="100%" alt="Login Page"></a>
-    <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/sidebar1.PNG" width="100%" alt="Login Page"></a>
-      <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/subjectlist.PNG" width="100%" alt="Login Page"></a>
-    <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/teachers.PNG" width="100%" alt="Login Page"></a>
-
-
-
-
-</p>
 
 ## About ATG 
 
