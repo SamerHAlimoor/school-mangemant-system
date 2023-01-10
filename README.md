@@ -32,20 +32,26 @@
      <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/student1.PNG" width="100%" alt="Login Page"></a>
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add%20-%20student%20invoices.PNG" width="100%" alt="Login Page"></a>
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-class.PNG" width="100%" alt="Login Page"></a>
-        <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-event.PNG" width="100%" alt="Login Page"></a>
+     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-event.PNG" width="100%" alt="Login Page"></a>
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-grade.PNG" width="100%" alt="Login Page"></a>
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-onlineclass.PNG" width="100%" alt="Login Page"></a>
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-onlineclass1.PNG" width="100%" alt="Login Page"></a>
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-onlineclass3.PNG" width="100%" alt="Login Page"></a>
-        <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-onlineclass3.PNG" width="100%" alt="Login Page"></a>
+    <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-onlineclass3.PNG" width="100%" alt="Login Page"></a>
 
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-parent-livewire.PNG" width="100%" alt="Login Page"></a>
+    
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-teacher.PNG" width="100%" alt="Login Page"></a>
+    
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-test.PNG" width="100%" alt="Login Page"></a>
-        <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/all-parents.PNG" width="100%" alt="Login Page"></a>
+    
+     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/all-parents.PNG" width="100%" alt="Login Page"></a>
+     
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/attendance.PNG" width="100%" alt="Login Page"></a>
+    
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/attendance_list.PNG" width="100%" alt="Login Page"></a>
-        <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/attendance2.PNG" width="100%" alt="Login Page"></a>
+    
+    <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/attendance2.PNG" width="100%" alt="Login Page"></a>
 
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/catch-recipt%20for%20student.PNG" width="100%" alt="Login Page"></a>
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/classes.PNG" width="100%" alt="Login Page"></a>
