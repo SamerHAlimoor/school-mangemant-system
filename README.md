@@ -51,6 +51,7 @@
 
 </p>
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-parent-livewire.PNG" width="100%" alt="Login Page"></a>
+    <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-teacher.PNG" width="100%" alt="Login Page"></a>
 
         <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-teacher.PNG" width="100%" alt="Login Page"></a>
         <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/add-test.PNG" width="100%" alt="Login Page"></a>
