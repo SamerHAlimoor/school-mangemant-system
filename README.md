@@ -8,8 +8,8 @@
 ## Admin Side
     
 </p>
-main login
 ##  Main Page
+
 <p align="center">
     <img src="https://github.com/SamerHAlimoor/school-mangemant-system/blob/master/main-login.PNG" width="100%" alt="Login Page"></a></p>
 </p>
